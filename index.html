@@ -7,7 +7,7 @@
 <meta name="description" content="Interactive take-away kit for the IBSEA 2026 workshop 'From Reading to Writing: Helping Learners Find Their Voice in a Digital World'.">
 <style>
 :root{
-  --ink:#2A1B3D;--ink2:#3B2A55;--lav:#F4F0F9;--line:#E2DAEE;--muted:#5E5573;
+  --ink:#2A1B3D;--lav:#F4F0F9;--line:#E2DAEE;--muted:#5E5573;
   --coral:#E8604C;--mari:#F2A541;--teal:#1F8A82;--berry:#C2457A;--green:#3E8E5E;--violet:#7B5EA7;--amber:#B86E08;
   --bg:#FFFFFF;--card:#FFFFFF;--text:#2A1B3D;--radius:16px;--shadow:0 4px 16px rgba(42,27,61,.10);
 }
@@ -31,36 +31,36 @@ header.hero{background:#2A1B3D;color:#fff;padding:56px 0 40px}
 .hero p.sub{font-size:clamp(1.1rem,2.4vw,1.4rem);color:#F6D7A7;margin:0 0 .4em}
 .hero p.meta{color:#DCD3EA;margin:.2em 0}
 .pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-.pill{border-radius:999px;padding:.45rem 1rem;font-weight:700;font-size:.95rem}
+.pill{border-radius:999px;padding:.45rem 1rem;font-weight:700;font-size:.95rem;text-decoration:none;display:inline-block}
 nav.toc{position:sticky;top:0;z-index:20;background:var(--card);border-bottom:1px solid var(--line);box-shadow:var(--shadow)}
-nav.toc ul{list-style:none;margin:0;padding:8px 20px;display:flex;gap:6px;overflow-x:auto;max-width:1120px;margin:0 auto;scrollbar-width:thin}
+nav.toc ul{list-style:none;padding:8px 20px;display:flex;gap:6px;overflow-x:auto;max-width:1120px;margin:0 auto;scrollbar-width:thin}
 nav.toc a{display:block;white-space:nowrap;text-decoration:none;color:var(--text);padding:.45rem .8rem;border-radius:999px;font-weight:600;font-size:.92rem}
 nav.toc a:hover,nav.toc a.active{background:var(--lav)}
 section{padding:56px 0;border-bottom:1px solid var(--line);scroll-margin-top:56px}
-section .lead{color:var(--muted);max-width:760px;margin-top:-.2em}
+section .lead{color:var(--muted);max-width:780px;margin-top:-.2em}
 .grid{display:grid;gap:16px}
 .g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
 .g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
-.g4{grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr))}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
 .card.tint{background:var(--lav)}
 .badge{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:.2rem .7rem;color:#fff}
 .dot{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:700;font-size:1.1rem;flex:none}
 .row{display:flex;gap:14px;align-items:flex-start}
-.timeline{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr))}
+.timeline{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(min(100%,130px),1fr))}
 .stage{border-radius:14px;padding:14px;color:#fff}
 .stage b{display:block;font-size:.85rem;opacity:.95}
 .stage span{font-weight:700}
 .btn{appearance:none;border:2px solid var(--violet);background:transparent;color:var(--text);font:inherit;font-weight:700;border-radius:999px;padding:.5rem 1.1rem;cursor:pointer;min-height:44px}
 .btn.primary{background:var(--violet);color:#fff}
 .btn:hover{filter:brightness(1.08)}
+.btn:disabled{opacity:.4;cursor:not-allowed}
 .btn[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
 @media (prefers-color-scheme: dark){.btn[aria-pressed="true"]{background:#F2A541;color:#2A1B3D;border-color:#F2A541}}
 .toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0}
 label{font-weight:700;display:block;margin:.6rem 0 .25rem}
 input[type=text],input[type=search],textarea,select{width:100%;font:inherit;color:var(--text);background:var(--card);border:2px solid var(--line);border-radius:10px;padding:.55rem .7rem}
 textarea{min-height:70px;resize:vertical}
-.mentor{font-family:Cambria,Georgia,serif;font-size:1.15rem;line-height:1.7}
+.mentor{font-family:Cambria,Georgia,serif;font-size:1.12rem;line-height:1.7}
 .app{display:flex;flex-direction:column}
 .app h3{margin:.3em 0 .1em}
 .app .tag{font-style:italic;color:var(--muted);margin:0 0 .6em}
@@ -77,7 +77,6 @@ textarea{min-height:70px;resize:vertical}
 .tbl th,.tbl td{border:1px solid var(--line);padding:.6rem .7rem;text-align:left;vertical-align:top}
 .tbl th{background:#2A1B3D;color:#fff}
 .tablewrap{overflow-x:auto}
-.result{margin-top:14px}
 .timerface{font-size:clamp(3rem,12vw,6rem);font-weight:700;font-variant-numeric:tabular-nums;text-align:center;font-family:Cambria,Georgia,serif}
 .check{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px dashed var(--line)}
 .check input{width:22px;height:22px;margin-top:3px;flex:none}
@@ -87,6 +86,11 @@ textarea{min-height:70px;resize:vertical}
 .chiprow{display:flex;flex-wrap:wrap;gap:8px}
 .callout{background:#2A1B3D;color:#fff;border-radius:var(--radius);padding:18px 20px}
 .callout b{color:#F2A541}
+.stake{cursor:pointer;text-align:left;font:inherit;color:var(--text);border:2px solid var(--line);background:var(--card);border-radius:14px;padding:14px;display:flex;gap:12px;align-items:center;min-height:64px;width:100%}
+.stake[aria-pressed="true"]{border-color:var(--mari);background:var(--lav)}
+.votebar{height:14px;border-radius:999px;background:var(--lav);overflow:hidden;flex:1}
+.votebar > div{height:100%;transition:width .3s}
+.pitchout{white-space:pre-wrap;font-size:1.08rem;line-height:1.6}
 footer{padding:36px 0;color:var(--muted);font-size:.95rem}
 .msg{min-height:1.4em;font-weight:700;color:var(--green)}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important}}
@@ -110,9 +114,10 @@ footer{padding:36px 0;color:var(--muted);font-size:.95rem}
     <p class="meta">Integrating literacy, inquiry and multimodal expression in the PYP</p>
     <p class="meta">Nahla Yehia (PYP Homeroom Teacher) &amp; Heba Mansour (English Language Teacher) · EIS Fifth Settlement</p>
     <div class="pills">
-      <a class="pill" style="background:#F2A541;color:#2A1B3D;text-decoration:none" href="#plan">Open the planner</a>
-      <a class="pill" style="background:#E8604C;color:#fff;text-decoration:none" href="#apps">Explore the apps</a>
-      <a class="pill" style="background:#1F8A82;color:#fff;text-decoration:none" href="#timer">Classroom timer</a>
+      <a class="pill" style="background:#F2A541;color:#2A1B3D" href="#townhall">Town Hall</a>
+      <a class="pill" style="background:#E8604C;color:#fff" href="#apps">Explore the apps</a>
+      <a class="pill" style="background:#7B5EA7;color:#fff" href="#plan">Open the planner</a>
+      <a class="pill" style="background:#1F8A82;color:#fff" href="#timer">Classroom timer</a>
     </div>
   </div>
 </header>
@@ -123,6 +128,7 @@ footer{padding:36px 0;color:var(--muted);font-size:.95rem}
     <li><a href="#pathway">Voice Pathway</a></li>
     <li><a href="#read">Read</a></li>
     <li><a href="#storyboard">Storyboard</a></li>
+    <li><a href="#townhall">Town Hall</a></li>
     <li><a href="#apps">Apps</a></li>
     <li><a href="#chooser">Tool chooser</a></li>
     <li><a href="#responsible">Responsible use</a></li>
@@ -144,8 +150,9 @@ footer{padding:36px 0;color:var(--muted);font-size:.95rem}
     <div class="stage" style="background:#E8604C"><b>0–5 min</b><span>Opening &amp; Provocation</span></div>
     <div class="stage" style="background:#B86E08"><b>5–10 min</b><span>Connecting Inquiry &amp; Literacy</span></div>
     <div class="stage" style="background:#1F8A82"><b>10–20 min</b><span>Investigate: Read Beyond the Words</span></div>
-    <div class="stage" style="background:#C2457A"><b>20–30 min</b><span>Compose: Transform Reading into Writing</span></div>
-    <div class="stage" style="background:#8A5A00"><b>30–40 min</b><span>Reimagine: One Text, Multiple Voices</span></div>
+    <div class="stage" style="background:#C2457A"><b>20–30 min</b><span>Compose: One Change, Two Voices</span></div>
+    <div class="stage" style="background:#8A5A00"><b>30–35 min</b><span>Stakeholder Town Hall</span></div>
+    <div class="stage" style="background:#5E4A8A"><b>35–40 min</b><span>Reimagine: One Text, Multiple Voices</span></div>
     <div class="stage" style="background:#3E8E5E"><b>40–50 min</b><span>Publish &amp; Reflect</span></div>
     <div class="stage" style="background:#7B5EA7"><b>50–60 min</b><span>Transfer to Classroom Practice</span></div>
   </div>
@@ -174,9 +181,10 @@ footer{padding:36px 0;color:var(--muted);font-size:.95rem}
   <div class="grid g3" id="pathwayGrid"></div>
   <div class="card tint" style="margin-top:18px">
     <h3>Worked example · Sharing the planet</h3>
-    <p><b>Central idea:</b> Living things depend on each other and on their environment.</p>
-    <p><b>Lines of inquiry:</b> how living things depend on one another · how human choices change habitats · our responsibility to protect living things.</p>
-    <p><b>Key concepts:</b> Connection, Causation, Responsibility · <b>Learner profile:</b> Caring, Communicators · <b>ATL:</b> Thinking, Communication, Research</p>
+    <p><b>Central idea:</b> Human choices can upset the balance of an ecosystem, and communities share responsibility for protecting it.</p>
+    <p><b>Lines of inquiry:</b> how living things in an ecosystem are interdependent · how human decisions affect habitats · how stakeholders see the same change differently.</p>
+    <p><b>Key concepts:</b> Connection, Causation, Perspective, Responsibility · <b>Learner profile:</b> Principled, Open-minded, Communicators · <b>ATL:</b> Thinking, Communication, Research, Social</p>
+    <p><b>Literacy focus:</b> point of view · figurative language · persuasive writing</p>
     <p class="note">This is an editable example. Swap in any unit from your own Programme of Inquiry; the pathway stays the same.</p>
   </div>
 </div></section>
@@ -189,9 +197,10 @@ footer{padding:36px 0;color:var(--muted);font-size:.95rem}
       <span class="badge" style="background:var(--teal)">Mentor text</span>
       <h3 style="margin-top:.6em">The Fig Tree</h3>
       <div class="mentor">
-        <p>For forty years, the old fig tree stood beside the school wall. Sparrows built nests in its arms, and children ate their lunch in its cool shade.</p>
-        <p>On Monday morning, a yellow machine rumbled through the gate. By Friday, only a stump remained.</p>
-        <p>On the empty wall, a small bird sat very still, looking at the place where its home used to be.</p>
+        <p>For forty years, the old fig tree stood guard beside the school wall. Its branches were a busy city of sparrows, and its shade was a cool blanket for children at lunchtime.</p>
+        <p>On Monday, a yellow machine roared through the gate. “We need a new classroom,” the principal explained. “More students means more space.”</p>
+        <p>By Friday, only a stump remained. On the empty wall, a small sparrow sat very still, staring at the place where its home used to be.</p>
+        <p>Some children cheered for the new building. Others said nothing at all.</p>
       </div>
       <p class="note">An original short text written for this workshop. You may reuse and adapt it freely.</p>
       <div class="toolbar noprint">
@@ -203,16 +212,16 @@ footer{padding:36px 0;color:var(--muted);font-size:.95rem}
       <h3>Reading roles (groups of 4)</h3>
       <div class="grid" style="gap:10px">
         <div class="row"><div class="dot" style="background:var(--violet)">?</div><div><b>Questioner</b><br>Leads See · Think · Wonder.</div></div>
-        <div class="row"><div class="dot" style="background:var(--coral)">W</div><div><b>Word Collector</b><br>Gathers 5 powerful words and builds a word cline.</div></div>
-        <div class="row"><div class="dot" style="background:var(--teal)">C</div><div><b>Connector</b><br>Links the text to the central idea.</div></div>
-        <div class="row"><div class="dot" style="background:#B86E08">R</div><div><b>Reporter</b><br>Shares one wonder with the room.</div></div>
+        <div class="row"><div class="dot" style="background:var(--coral)">W</div><div><b>Word Collector</b><br>Gathers 5 precise words and 1 metaphor; builds a shades-of-meaning line.</div></div>
+        <div class="row"><div class="dot" style="background:var(--teal)">C</div><div><b>Connector</b><br>Links the text to the central idea and reports back.</div></div>
+        <div class="row"><div class="dot" style="background:#B86E08">P</div><div><b>Perspective Detective</b><br>Whose voice is heard? Whose is missing? What is the evidence?</div></div>
       </div>
       <h3 style="margin-top:1em">Four ways to read beyond the words</h3>
       <ul>
         <li><b>See · Think · Wonder:</b> a visible-thinking routine that slows reading down.</li>
-        <li><b>Vocabulary detectives:</b> collect powerful words; order them on a word cline.</li>
-        <li><b>Question the author:</b> Whose voice is missing? What does the author want us to feel?</li>
-        <li><b>Change the lens:</b> retell one moment through another character’s eyes.</li>
+        <li><b>Vocabulary detectives:</b> collect precise words and figurative language; order shades of meaning (uneasy → anxious → devastated).</li>
+        <li><b>Question the author:</b> whose voice is heard, and whose is missing? Which words reveal the author’s attitude?</li>
+        <li><b>Compare perspectives:</b> contrast two characters’ points of view on one event, using evidence from the text.</li>
       </ul>
     </div>
   </div>
@@ -221,33 +230,102 @@ footer{padding:36px 0;color:var(--muted);font-size:.95rem}
     <div class="card"><label for="think">I think…</label><textarea id="think" data-save></textarea></div>
     <div class="card"><label for="wonder">I wonder…</label><textarea id="wonder" data-save></textarea></div>
   </div>
-  <div class="card" style="margin-top:16px">
-    <h3>Word cline builder</h3>
-    <p class="note">Add three to five words and arrange them from weakest to strongest (e.g. sad → upset → heartbroken).</p>
-    <div class="toolbar noprint">
-      <label for="clineWord" class="hidden">New word</label>
-      <input type="text" id="clineWord" placeholder="Type a word, then select Add" style="max-width:320px" aria-label="New word for the word cline">
-      <button class="btn primary" type="button" id="clineAdd">Add</button>
-      <button class="btn" type="button" id="clineClear">Clear</button>
+  <div class="grid g2" style="margin-top:16px">
+    <div class="card">
+      <h3>Shades-of-meaning builder</h3>
+      <p class="note">Add three to five words and arrange them from weakest to strongest (e.g. uneasy → anxious → devastated).</p>
+      <div class="toolbar noprint">
+        <input type="text" id="clineWord" placeholder="Type a word, then select Add" style="max-width:280px" aria-label="New word for the shades-of-meaning line">
+        <button class="btn primary" type="button" id="clineAdd">Add</button>
+        <button class="btn" type="button" id="clineClear">Clear</button>
+      </div>
+      <ol id="clineList" class="chiprow" style="list-style:none;padding:0" aria-live="polite"></ol>
+      <p class="msg" id="clineMsg" role="status"></p>
     </div>
-    <ol id="clineList" class="chiprow" style="list-style:none;padding:0" aria-live="polite"></ol>
-    <p class="msg" id="clineMsg" role="status"></p>
+    <div class="card">
+      <h3>Figurative language hunt</h3>
+      <p class="note">Find the two metaphors in the text, then explain what each one suggests.</p>
+      <details><summary style="cursor:pointer;font-weight:700;color:var(--violet)">Reveal the answers</summary>
+        <p><b>“a busy city of sparrows”</b>: the tree was crowded, lively and full of life, like a home for a whole community.</p>
+        <p><b>“a cool blanket”</b>: the shade was comforting and protective for the children.</p>
+        <p><b>Also notice:</b> “stood guard” (personification: the tree protected the school).</p>
+      </details>
+    </div>
+  </div>
+  <div class="card tint" style="margin-top:16px">
+    <h3>Compare perspectives</h3>
+    <div class="grid g2">
+      <div><label for="pvA">The principal’s point of view + evidence</label><textarea id="pvA" data-save placeholder="“More students means more space.”"></textarea></div>
+      <div><label for="pvB">The sparrow’s point of view + evidence</label><textarea id="pvB" data-save placeholder="“staring at the place where its home used to be”"></textarea></div>
+    </div>
+    <label for="pvC">Whose voice is missing? (e.g. the children who “said nothing at all”)</label>
+    <textarea id="pvC" data-save></textarea>
   </div>
 </div></section>
 
 <!-- STORYBOARD -->
 <section id="storyboard"><div class="wrap">
-  <h2>Compose: the story through the bird’s eyes</h2>
-  <p class="lead">Talk it → word bank → sentence frames → storyboard → draft &amp; TAG. Sketch in each panel (finger, stylus or mouse) and add a caption, or print a blank copy for paper.</p>
+  <h2>Compose: one change, two voices</h2>
+  <p class="lead">Discuss it → word bank → frames (optional) → storyboard → draft &amp; revise. Retell “The Fig Tree” from two points of view. Sketch in each panel (finger, stylus or mouse) and add a caption, or print a blank copy for paper.</p>
   <div class="card tint" style="margin-bottom:16px">
-    <b>Sentence frames:</b> From my branch, I could see… · I felt ___ because ___ . · If I could speak to the people, I would say…
-    <br><b>Success criteria:</b> ✓ clear beginning, middle and end · ✓ a feeling and a reason · ✓ a message for a real audience
+    <b>Optional frames:</b> From my point of view… · Although ___, I believe ___ because ___ . · The evidence shows… · If we ___, then ___ .
+    <br><b>Success criteria:</b> ✓ two perspectives, each backed by evidence · ✓ precise words and one figurative phrase · ✓ a fair solution or call to action
   </div>
   <div class="toolbar noprint">
     <button class="btn" type="button" id="clearAll">Clear all drawings</button>
     <button class="btn primary" type="button" data-print="storyboard">🖨 Print storyboard</button>
   </div>
   <div class="panels" id="panels"></div>
+</div></section>
+
+<!-- TOWN HALL -->
+<section id="townhall"><div class="wrap">
+  <h2>Stakeholder Town Hall: who decides what happens next?</h2>
+  <p class="lead">Each group draws a stakeholder card, prepares a 60-second pitch, and the room votes for the <b>fairest</b> solution, not the loudest voice.</p>
+  <div class="grid g2">
+    <div class="card">
+      <h3>1 · Draw your stakeholder</h3>
+      <div class="toolbar noprint"><button class="btn primary" type="button" id="drawCard">🎲 Draw a random card</button></div>
+      <div class="grid" style="gap:8px" id="stakeList" role="group" aria-label="Stakeholders"></div>
+      <p class="msg" id="stakeMsg" role="status"></p>
+    </div>
+    <div class="card tint">
+      <h3>2 · Build your 60-second pitch</h3>
+      <label for="pClaim">Claim: what should happen to the school yard?</label>
+      <textarea id="pClaim" data-save></textarea>
+      <label for="pEvid">Evidence: one detail from the text</label>
+      <textarea id="pEvid" data-save></textarea>
+      <label for="pCounter">Counterargument: answer the strongest opposing view</label>
+      <textarea id="pCounter" data-save></textarea>
+      <label for="pAction">Call to action: a fair, realistic solution</label>
+      <textarea id="pAction" data-save></textarea>
+      <div class="toolbar noprint">
+        <button class="btn primary" type="button" id="buildPitch">Build my pitch</button>
+        <button class="btn" type="button" id="pitchTimer">⏱ 60-second timer</button>
+        <span id="pitchClock" style="font-weight:700;font-size:1.3rem;font-variant-numeric:tabular-nums" aria-live="off">1:00</span>
+      </div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Your pitch</h3>
+    <p class="pitchout" id="pitchOut" aria-live="polite">Choose a stakeholder and fill in the four parts, then select “Build my pitch”.</p>
+    <p class="note">Frames: I represent ___ and we believe ___ because ___. · Some may say ___; however, ___.</p>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>3 · Vote for the fairest solution</h3>
+    <p class="note">Tap a stakeholder each time someone votes (one device at the front, or each table on its own device).</p>
+    <div id="voteList" class="grid" style="gap:10px"></div>
+    <div class="toolbar noprint"><button class="btn" type="button" id="voteReset">Reset votes</button></div>
+    <p class="msg" id="voteMsg" role="status"></p>
+  </div>
+  <div class="card tint" style="margin-top:16px">
+    <h3>Take it to your classroom</h3>
+    <ul>
+      <li><b>Speak it digitally:</b> record each stakeholder’s pitch in VoiceThread on a photo of the school yard; peers reply with TAG comments.</li>
+      <li><b>Write it:</b> each learner turns the pitch into a persuasive letter to the principal.</li>
+      <li><b>Act:</b> send the class’s fair solution to a real audience: school leadership, the eco-club or families.</li>
+    </ul>
+  </div>
 </div></section>
 
 <!-- APPS -->
@@ -261,7 +339,7 @@ footer{padding:36px 0;color:var(--muted);font-size:.95rem}
     <button class="btn" type="button" data-filter="film" aria-pressed="false">Film &amp; Animation</button>
   </div>
   <label for="appSearch">Search apps</label>
-  <input type="search" id="appSearch" placeholder="e.g. voice, comic, peer feedback, maths">
+  <input type="search" id="appSearch" placeholder="e.g. voice, comic, debate, peer feedback, maths">
   <p class="note" id="appCount" aria-live="polite"></p>
   <div class="grid g3" id="appGrid"></div>
 </div></section>
@@ -278,10 +356,11 @@ footer{padding:36px 0;color:var(--muted);font-size:.95rem}
       <option value="sequence">Sequence and summarise</option>
       <option value="collab">Collaborate and give peer feedback</option>
       <option value="explain">Explain a concept to an audience</option>
+      <option value="argue">Argue a point of view with evidence</option>
       <option value="life">Bring characters and processes to life</option>
       <option value="multi">Express ideas in more than one language</option>
     </select>
-    <div class="result" id="intentResult" aria-live="polite"></div>
+    <div style="margin-top:14px" id="intentResult" aria-live="polite"></div>
   </div>
   <div class="tablewrap" style="margin-top:16px">
     <table class="tbl">
@@ -291,6 +370,7 @@ footer{padding:36px 0;color:var(--muted);font-size:.95rem}
         <tr><td><b>Sequence &amp; summarise</b></td><td>Make Beliefs Comix · HUE storyboard</td><td>Paper comic strip · 6-panel template</td></tr>
         <tr><td><b>Collaborate &amp; give peer feedback</b></td><td>Boomwriter · VoiceThread</td><td>Gallery walk · round-robin writing</td></tr>
         <tr><td><b>Explain a concept to an audience</b></td><td>Powtoon · Digital Films</td><td>Freeze-frame tableau · poster talk</td></tr>
+        <tr><td><b>Argue a point of view with evidence</b></td><td>VoiceThread · Make Beliefs Comix</td><td>Stakeholder Town Hall · persuasive letter</td></tr>
         <tr><td><b>Bring characters &amp; processes to life</b></td><td>HUE Animation</td><td>Paper cut-out flipbook · role-play</td></tr>
       </tbody>
     </table>
@@ -335,7 +415,7 @@ footer{padding:36px 0;color:var(--muted);font-size:.95rem}
   </div>
   <div class="card tint" style="margin-top:16px">
     <h3>Evidence of learning</h3>
-    <p><b>Monitor:</b> observe talk in reading roles; listen for perspective language. <b>Document:</b> storyboards, drafts, recordings, VoiceThread comments. <b>Measure:</b> a single-point rubric based on co-created success criteria.</p>
+    <p><b>Monitor:</b> observe talk in reading roles and town-hall pitches; listen for evidence language. <b>Document:</b> storyboards, drafts, recordings, VoiceThread comments. <b>Measure:</b> a single-point rubric based on co-created success criteria.</p>
   </div>
 </div></section>
 
@@ -343,8 +423,8 @@ footer{padding:36px 0;color:var(--muted);font-size:.95rem}
 <section id="transfer"><div class="wrap">
   <h2>Same pathway, any subject</h2>
   <div class="grid g3">
-    <div class="card"><h3 style="color:var(--coral)">Mathematics</h3><p>Word-problem comics; learners explain a strategy aloud in VoiceThread.</p></div>
-    <div class="card"><h3 style="color:var(--teal)">Science</h3><p>Stop-motion life cycles or the water cycle with HUE (free activity guides available).</p></div>
+    <div class="card"><h3 style="color:var(--coral)">Mathematics</h3><p>Word-problem comics; learners explain and defend a strategy in VoiceThread.</p></div>
+    <div class="card"><h3 style="color:var(--teal)">Science</h3><p>Stop-motion life cycles or the water cycle with HUE; a town hall on a local environmental issue.</p></div>
     <div class="card"><h3 style="color:var(--berry)">Arts</h3><p>Narrated gallery: artists record the story behind their work in Little Bird Tales.</p></div>
     <div class="card"><h3 style="color:#B86E08">Physical Education</h3><p>Comic-strip coaching steps for a skill; a Powtoon explaining the rules of a game.</p></div>
     <div class="card"><h3 style="color:var(--violet)">Languages</h3><p>Bilingual comics in Make Beliefs Comix; voice books in more than one language.</p></div>
@@ -359,18 +439,18 @@ footer{padding:36px 0;color:var(--muted);font-size:.95rem}
   <form id="planForm" class="card" novalidate>
     <div class="grid g2">
       <div><label for="pUnit">Unit / transdisciplinary theme</label><input type="text" id="pUnit" data-save placeholder="e.g. Sharing the planet"></div>
-      <div><label for="pGrade">Grade / subject</label><input type="text" id="pGrade" data-save placeholder="e.g. Grade 3 · English & UOI"></div>
+      <div><label for="pGrade">Class / subject</label><input type="text" id="pGrade" data-save placeholder="e.g. English & UOI"></div>
     </div>
     <label for="p1">1 · Learning intention: what will learners understand and be able to do?</label>
-    <textarea id="p1" data-save placeholder="Example: Explain how humans affect habitats, from another perspective"></textarea>
+    <textarea id="p1" data-save placeholder="Example: Explain how a human decision affects an ecosystem, from two points of view"></textarea>
     <label for="p2">2 · Meaningful learner task: what will they create, and for whom?</label>
-    <textarea id="p2" data-save placeholder="Example: A narrated story from the bird’s point of view, for families"></textarea>
+    <textarea id="p2" data-save placeholder="Example: A two-voice comic or narrated debate, shared with the school community"></textarea>
     <label for="p3">3 · Opportunities for agency: where is voice, choice and ownership?</label>
-    <textarea id="p3" data-save placeholder="Example: Learners choose the mode and co-create success criteria"></textarea>
+    <textarea id="p3" data-save placeholder="Example: Learners choose the mode, co-create success criteria and propose a solution"></textarea>
     <label for="p4">4 · Resources: which digital and non-digital tools?</label>
-    <textarea id="p4" data-save placeholder="Example: Mentor text, storyboard, Little Bird Tales or paper puppets"></textarea>
+    <textarea id="p4" data-save placeholder="Example: Mentor text, two-voice storyboard, Make Beliefs Comix or VoiceThread"></textarea>
     <label for="p5">5 · Evidence of learning: how will you monitor, document and measure?</label>
-    <textarea id="p5" data-save placeholder="Example: Storyboard, recording, TAG comments, single-point rubric"></textarea>
+    <textarea id="p5" data-save placeholder="Example: Storyboard, drafts, VoiceThread comments, single-point rubric"></textarea>
     <label for="p6">Exit ticket: one thing I will try next week</label>
     <input type="text" id="p6" data-save>
     <div class="toolbar noprint">
@@ -411,18 +491,18 @@ footer{padding:36px 0;color:var(--muted);font-size:.95rem}
     <div class="card">
       <h3>Recommended references</h3>
       <ol>
-        <li><a href="https://www.ibo.org/programmes/primary-years-programme/curriculum/" target="_blank" rel="noopener">PYP curriculum framework, International Baccalaureate</a>: the three pillars, agency and action.</li>
-        <li><a href="https://www.ibo.org/programmes/primary-years-programme/curriculum/learning-and-teaching/" target="_blank" rel="noopener">Learning and teaching, International Baccalaureate</a>: conceptual inquiry, transdisciplinary learning and ATL.</li>
-        <li><a href="https://ibo.org/programmes/primary-years-programme/curriculum/the-learner/" target="_blank" rel="noopener">The learner, International Baccalaureate</a>: agency and learner ownership.</li>
-        <li><a href="https://ibo.org/globalassets/new-structure/about-the-ib/pdfs/assessment-principles-and-practices---quality-assessment-in-a-digital-age-e.pdf" target="_blank" rel="noopener">Assessment principles and practices: Quality assessment in a digital age</a>: assessment in the PYP.</li>
-        <li><a href="https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research" target="_blank" rel="noopener">UNESCO: Guidance for Generative AI in Education and Research</a>.</li>
+        <li><a href="https://www.ibo.org/programmes/primary-years-programme/curriculum/" target="_blank" rel="noopener">PYP curriculum framework, International Baccalaureate</a></li>
+        <li><a href="https://www.ibo.org/programmes/primary-years-programme/curriculum/learning-and-teaching/" target="_blank" rel="noopener">Learning and teaching, International Baccalaureate</a></li>
+        <li><a href="https://ibo.org/programmes/primary-years-programme/curriculum/the-learner/" target="_blank" rel="noopener">The learner, International Baccalaureate</a></li>
+        <li><a href="https://ibo.org/globalassets/new-structure/about-the-ib/pdfs/assessment-principles-and-practices---quality-assessment-in-a-digital-age-e.pdf" target="_blank" rel="noopener">Assessment principles and practices: Quality assessment in a digital age</a></li>
+        <li><a href="https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research" target="_blank" rel="noopener">UNESCO: Guidance for Generative AI in Education and Research</a></li>
       </ol>
     </div>
     <div class="card tint">
       <h3>Academic grounding</h3>
       <ul>
-        <li><b>Multiliteracies:</b> The New London Group’s work highlights linguistic and cultural diversity alongside multiple modes of communication.</li>
-        <li><b>Digital writing development:</b> research on digital writing instruction and collaborative composition shows how digital environments support drafting, feedback and revision.</li>
+        <li><b>Multiliteracies:</b> The New London Group (1996) highlights linguistic and cultural diversity alongside multiple modes of communication.</li>
+        <li><b>Digital writing development:</b> research on digital writing and collaborative composition shows how digital environments support drafting, feedback and revision.</li>
         <li><b>Responsible educational AI:</b> UNESCO emphasises human-centred, age-appropriate and ethically considered use of generative AI.</li>
         <li><b>Visible thinking:</b> See · Think · Wonder is a Project Zero thinking routine (Harvard Graduate School of Education).</li>
       </ul>
@@ -448,25 +528,29 @@ footer{padding:36px 0;color:var(--muted);font-size:.95rem}
   };
   function esc(t){ return String(t).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]; }); }
 
-  // ---------- Pathway ----------
+  // Pathway
   var path = [
-    ["Investigate", "Read beyond the words", "See · Think · Wonder, vocabulary detectives, question the author.", "Thinking · Research", "#1F8A82"],
-    ["Compose", "Turn reading into writing", "Talk it, word bank, sentence frames, storyboard, draft.", "Communication", "#C2457A"],
-    ["Reimagine", "One text, many voices", "Speak it, draw it, move it, publish it.", "Thinking · Social", "#B86E08"],
-    ["Publish", "Share with a real audience", "Families, peers, class blog, printed class book.", "Communication · Social", "#3E8E5E"],
+    ["Investigate", "Read beyond the words", "See · Think · Wonder, shades of meaning, figurative language, compare perspectives.", "Thinking · Research", "#1F8A82"],
+    ["Compose", "Turn reading into writing", "Discuss it, word bank, optional frames, two-voice storyboard, draft and revise.", "Communication", "#C2457A"],
+    ["Reimagine", "One text, many voices", "Town hall pitches, then speak it, draw it, move it, publish it.", "Thinking · Social", "#B86E08"],
+    ["Publish", "Share with a real audience", "Families, peers, school leadership, class blog, printed class book.", "Communication · Social", "#3E8E5E"],
     ["Reflect", "Feedback & next steps", "TAG feedback, 3-2-1 reflection, single-point rubric.", "Self-management", "#7B5EA7"]
   ];
   $("#pathwayGrid").innerHTML = path.map(function(p, i){
     return '<div class="card"><div class="row"><div class="dot" style="background:' + p[4] + '">' + (i + 1) + '</div><div><h3 style="margin:0;color:' + p[4] + '">' + p[0] + '</h3><b>' + p[1] + '</b></div></div><p>' + p[2] + '</p><p class="note">ATL: ' + p[3] + '</p></div>';
   }).join("");
 
-  // ---------- Autosave ----------
-  $$("[data-save]").forEach(function(el){
-    var v = store.get(el.id); if (v !== null) el.value = v;
-    el.addEventListener("input", function(){ store.set(el.id, el.value); });
-  });
+  // Autosave (static fields)
+  function bindSave(root){
+    $$("[data-save]", root).forEach(function(el){
+      if (el.dataset.bound) return; el.dataset.bound = "1";
+      var v = store.get(el.id); if (v !== null) el.value = v;
+      el.addEventListener("input", function(){ store.set(el.id, el.value); });
+    });
+  }
+  bindSave(document);
 
-  // ---------- Read aloud ----------
+  // Read aloud
   var ra = $("#readAloud");
   if (!("speechSynthesis" in window)) { ra.classList.add("hidden"); }
   ra.addEventListener("click", function(){
@@ -477,12 +561,11 @@ footer{padding:36px 0;color:var(--muted);font-size:.95rem}
     speechSynthesis.speak(u); ra.textContent = "⏹ Stop";
   });
 
-  // ---------- Word cline ----------
+  // Shades of meaning
   var cline = [];
   try { cline = JSON.parse(store.get("cline") || "[]"); if (!Array.isArray(cline)) cline = []; } catch(e){ cline = []; }
   function renderCline(){
-    var list = $("#clineList");
-    list.innerHTML = cline.map(function(w, i){
+    $("#clineList").innerHTML = cline.map(function(w, i){
       return '<li class="row" style="align-items:center;gap:6px"><span class="pill" style="background:var(--lav);color:var(--text)">' + esc(w) + '</span>' +
         '<button class="btn" type="button" data-up="' + i + '" aria-label="Move ' + esc(w) + ' weaker" ' + (i === 0 ? "disabled" : "") + '>←</button>' +
         '<button class="btn" type="button" data-down="' + i + '" aria-label="Move ' + esc(w) + ' stronger" ' + (i === cline.length - 1 ? "disabled" : "") + '>→</button>' +
@@ -490,14 +573,14 @@ footer{padding:36px 0;color:var(--muted);font-size:.95rem}
     }).join("");
     store.set("cline", JSON.stringify(cline));
   }
-  $("#clineAdd").addEventListener("click", addWord);
-  $("#clineWord").addEventListener("keydown", function(e){ if (e.key === "Enter") { e.preventDefault(); addWord(); } });
   function addWord(){
     var inp = $("#clineWord"), w = inp.value.trim().slice(0, 30), msg = $("#clineMsg");
     if (!w) { msg.textContent = "Type a word first."; return; }
-    if (cline.length >= 6) { msg.textContent = "A word cline works best with up to 6 words."; return; }
+    if (cline.length >= 6) { msg.textContent = "A shades-of-meaning line works best with up to 6 words."; return; }
     cline.push(w); inp.value = ""; msg.textContent = "Added “" + w + "”."; renderCline(); inp.focus();
   }
+  $("#clineAdd").addEventListener("click", addWord);
+  $("#clineWord").addEventListener("keydown", function(e){ if (e.key === "Enter") { e.preventDefault(); addWord(); } });
   $("#clineList").addEventListener("click", function(e){
     var b = e.target.closest("button"); if (!b) return;
     var i, j;
@@ -510,79 +593,144 @@ footer{padding:36px 0;color:var(--muted);font-size:.95rem}
   $("#clineClear").addEventListener("click", function(){ cline = []; renderCline(); $("#clineMsg").textContent = "Cleared."; });
   renderCline();
 
-  // ---------- Storyboard ----------
-  var prompts = ["Before: my home", "Monday: the machine", "Friday: the stump", "How I feel", "What I wonder", "My message"];
+  // Storyboard
+  var prompts = ["The sparrow’s home", "The principal’s problem", "The day it changed", "Sparrow: how I feel & why", "Principal: why I decided", "Our fair solution"];
   $("#panels").innerHTML = prompts.map(function(p, i){
     return '<div class="panel"><div class="ph"><div class="row" style="align-items:center;gap:8px"><span class="num">' + (i + 1) + '</span><b>' + p + '</b></div>' +
       '<button class="btn noprint" type="button" data-clear="' + i + '" style="padding:.3rem .8rem;min-height:36px">Clear</button></div>' +
       '<canvas width="600" height="450" aria-label="Drawing area for panel ' + (i + 1) + ': ' + p + '" role="img"></canvas>' +
-      '<label for="cap' + i + '">Caption</label><input type="text" id="cap' + i + '" data-save maxlength="140"></div>';
+      '<label for="cap' + i + '">Caption</label><input type="text" id="cap' + i + '" data-save maxlength="160"></div>';
   }).join("");
-  $$("#panels [data-save]").forEach(function(el){ var v = store.get(el.id); if (v !== null) el.value = v; el.addEventListener("input", function(){ store.set(el.id, el.value); }); });
+  bindSave($("#panels"));
   $$("#panels canvas").forEach(function(cv, i){
     var ctx = cv.getContext("2d"), drawing = false;
     ctx.lineCap = "round"; ctx.lineJoin = "round"; ctx.lineWidth = 5; ctx.strokeStyle = "#2A1B3D";
-    var saved = store.get("cv" + i);
+    var saved = store.get("cv2_" + i);
     if (saved) { var im = new Image(); im.onload = function(){ ctx.drawImage(im, 0, 0); }; im.src = saved; }
     function pos(e){ var r = cv.getBoundingClientRect(); return { x: (e.clientX - r.left) * cv.width / r.width, y: (e.clientY - r.top) * cv.height / r.height }; }
     cv.addEventListener("pointerdown", function(e){ drawing = true; cv.setPointerCapture(e.pointerId); var p = pos(e); ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(p.x + 0.1, p.y + 0.1); ctx.stroke(); });
     cv.addEventListener("pointermove", function(e){ if (!drawing) return; var p = pos(e); ctx.lineTo(p.x, p.y); ctx.stroke(); });
-    function end(){ if (!drawing) return; drawing = false; try { store.set("cv" + i, cv.toDataURL("image/png")); } catch(err){} }
+    function end(){ if (!drawing) return; drawing = false; try { store.set("cv2_" + i, cv.toDataURL("image/png")); } catch(err){} }
     cv.addEventListener("pointerup", end); cv.addEventListener("pointercancel", end); cv.addEventListener("pointerleave", end);
   });
-  function clearCanvas(i){ var cv = $$("#panels canvas")[i]; cv.getContext("2d").clearRect(0, 0, cv.width, cv.height); store.del("cv" + i); }
+  function clearCanvas(i){ var cv = $$("#panels canvas")[i]; cv.getContext("2d").clearRect(0, 0, cv.width, cv.height); store.del("cv2_" + i); }
   $("#panels").addEventListener("click", function(e){ var b = e.target.closest("[data-clear]"); if (b) clearCanvas(+b.dataset.clear); });
   $("#clearAll").addEventListener("click", function(){ for (var i = 0; i < 6; i++) clearCanvas(i); });
 
-  // ---------- Apps ----------
+  // Town Hall
+  var stakes = [
+    { k: "S", name: "The sparrow", wants: "a safe home and food", color: "#1F8A82" },
+    { k: "P", name: "The principal", wants: "space for more students", color: "#E8604C" },
+    { k: "N", name: "A new student", wants: "a classroom to learn in", color: "#7B5EA7" },
+    { k: "A", name: "A parent", wants: "shade and a healthy school", color: "#C2457A" },
+    { k: "E", name: "The eco-club", wants: "more nature, not less", color: "#3E8E5E" }
+  ];
+  var chosen = store.get("stake");
+  chosen = chosen === null ? -1 : +chosen;
+  function renderStakes(){
+    $("#stakeList").innerHTML = stakes.map(function(s, i){
+      return '<button class="stake" type="button" data-stake="' + i + '" aria-pressed="' + (i === chosen) + '"><span class="dot" style="background:' + s.color + '">' + s.k + '</span><span><b>' + s.name + '</b><br><span class="note">Wants: ' + s.wants + '</span></span></button>';
+    }).join("");
+  }
+  function pick(i){ chosen = i; store.set("stake", String(i)); renderStakes(); $("#stakeMsg").textContent = "You represent: " + stakes[i].name + "."; }
+  $("#stakeList").addEventListener("click", function(e){ var b = e.target.closest("[data-stake]"); if (b) pick(+b.dataset.stake); });
+  $("#drawCard").addEventListener("click", function(){
+    var i; do { i = Math.floor(Math.random() * stakes.length); } while (i === chosen && stakes.length > 1);
+    pick(i);
+  });
+  renderStakes();
+  if (chosen >= 0 && chosen < stakes.length) $("#stakeMsg").textContent = "You represent: " + stakes[chosen].name + ".";
+
+  $("#buildPitch").addEventListener("click", function(){
+    var out = $("#pitchOut");
+    if (chosen < 0) { out.textContent = "First choose or draw a stakeholder."; return; }
+    var c = $("#pClaim").value.trim(), ev = $("#pEvid").value.trim(), co = $("#pCounter").value.trim(), a = $("#pAction").value.trim();
+    if (!c || !ev || !co || !a) { out.textContent = "Fill in all four parts (claim, evidence, counterargument, call to action) to build your pitch."; return; }
+    out.textContent = "I represent " + stakes[chosen].name.replace(/^The /, "the ").replace(/^A /, "a ") + ", and we believe " + c.replace(/[.!]+$/, "") + ".\n" +
+      "The text shows us that " + ev.replace(/[.!]+$/, "") + ".\n" +
+      "Some may say " + co.replace(/[.!]+$/, "") + ".\n" +
+      "So we call on the school community to " + a.replace(/[.!]+$/, "") + ".";
+  });
+
+  var pTick = null, pLeft = 60;
+  function pDraw(){ var s = Math.max(0, Math.ceil(pLeft)); $("#pitchClock").textContent = Math.floor(s / 60) + ":" + (s % 60 < 10 ? "0" : "") + (s % 60); }
+  $("#pitchTimer").addEventListener("click", function(){
+    if (pTick) { clearInterval(pTick); pTick = null; pLeft = 60; pDraw(); $("#pitchTimer").textContent = "⏱ 60-second timer"; return; }
+    pLeft = 60; var end = Date.now() + 60000; $("#pitchTimer").textContent = "⏹ Stop";
+    pTick = setInterval(function(){
+      pLeft = (end - Date.now()) / 1000; pDraw();
+      if (pLeft <= 0) { clearInterval(pTick); pTick = null; $("#pitchTimer").textContent = "⏱ 60-second timer"; $("#pitchClock").textContent = "Time!"; }
+    }, 200);
+  });
+
+  var votes = [0, 0, 0, 0, 0];
+  try { var sv = JSON.parse(store.get("votes") || "null"); if (Array.isArray(sv) && sv.length === 5) votes = sv.map(function(n){ n = +n; return isFinite(n) && n > 0 ? Math.min(Math.floor(n), 999) : 0; }); } catch(e){}
+  function renderVotes(){
+    var total = votes.reduce(function(a, b){ return a + b; }, 0), max = Math.max.apply(null, votes);
+    $("#voteList").innerHTML = stakes.map(function(s, i){
+      var pct = total ? Math.round(votes[i] / total * 100) : 0;
+      return '<div class="row" style="align-items:center"><button class="btn" type="button" data-vote="' + i + '" style="min-width:170px;text-align:left">+ ' + s.name + '</button>' +
+        '<div class="votebar" aria-hidden="true"><div style="width:' + pct + '%;background:' + s.color + '"></div></div>' +
+        '<span style="min-width:72px;text-align:right;font-weight:700">' + votes[i] + ' (' + pct + '%)</span></div>';
+    }).join("");
+    store.set("votes", JSON.stringify(votes));
+    if (total === 0) { $("#voteMsg").textContent = "No votes yet."; return; }
+    var leaders = stakes.filter(function(s, i){ return votes[i] === max; }).map(function(s){ return s.name; });
+    $("#voteMsg").textContent = total + " vote" + (total === 1 ? "" : "s") + ". Fairest solution so far: " + leaders.join(" & ") + ".";
+  }
+  $("#voteList").addEventListener("click", function(e){ var b = e.target.closest("[data-vote]"); if (!b) return; var i = +b.dataset.vote; if (votes[i] < 999) votes[i]++; renderVotes(); });
+  $("#voteReset").addEventListener("click", function(){ votes = [0, 0, 0, 0, 0]; renderVotes(); });
+  renderVotes();
+
+  // Apps
   var apps = [
-    { name: "Little Bird Tales", fam: "voice", url: "https://www.littlebirdtales.com", color: "#B86E08", tag: "Draw it · write it · tell it",
-      what: "Learners create their own art in the built-in art pad or upload drawings and photos, add text, and record their own voice on every page to make a narrated story book. Bright and simple for younger learners, yet rich enough for older ones.",
-      pyp: ["Narrated retelling of “The Fig Tree” from the bird’s perspective", "A class book where each learner contributes one page", "Reflections and learning journals for portfolios", "Language practice: illustrate a word or phrase and record it"],
-      steps: ["Set up a teacher account (sign-up uses a teacher or parent email).", "Learners plan their pages from the paper storyboard.", "On each page: draw or upload a picture, type the text, record the narration.", "Rehearse once, record once. Then share the finished tale with families."],
+    { name: "Little Bird Tales", fam: "voice", url: "https://www.commonsensemedia.org/app-reviews/little-bird-tales-storytelling-made-easy", color: "#B86E08", tag: "Draw it · write it · tell it",
+      what: "Learners create their own art in the built-in art pad or upload drawings and photos, add text, and record their own voice on every page to make a narrated story book.",
+      pyp: ["Two-voice narrated retelling: one page from the sparrow, one from the principal", "A class book where each learner contributes one page", "Reflections and learning journals for portfolios"],
+      steps: ["Set up a teacher account (sign-up uses a teacher or parent email).", "Learners plan their pages from the paper storyboard.", "On each page: draw or upload a picture, type the text, record the narration.", "Rehearse once, record once. Then share with families."],
       tip: "Fluency and expression in the recording become visible evidence of reading growth.", keys: "voice narration story book art record oral fluency families portfolio" },
     { name: "VoiceThread", fam: "voice", url: "https://voicethread.com", color: "#B86E08", tag: "Conversations around media",
       what: "Upload images, documents or video, and learners respond with voice, video, text or drawings, building a conversation around the work. Ed.VoiceThread describes itself as a platform where students develop critical thinking, communication, collaboration and creativity.",
-      pyp: ["Learners explain their storyboard panels; peers reply with questions", "Maths: explain a strategy aloud", "Summative presentations and the PYP Exhibition"],
-      steps: ["Photograph learners’ storyboards and upload them as a VoiceThread.", "Model one voice comment using a sentence stem.", "Learners comment and reply to each other using TAG.", "Leave audio feedback for each learner."],
-      tip: "Its focus maps neatly onto the ATL skills; name them explicitly with learners.", keys: "voice video comment peer feedback exhibition maths presentation collaboration" },
+      pyp: ["Record each town-hall stakeholder pitch on a photo of the school yard", "Peers reply with counterarguments and TAG feedback", "Maths: explain and defend a strategy", "Summative presentations and the PYP Exhibition"],
+      steps: ["Upload a photo of the school yard or learners’ storyboards.", "Model one voice comment using a sentence frame.", "Learners record their pitch and reply to each other using TAG.", "Leave audio feedback for each learner."],
+      tip: "A recorded debate makes argument and counterargument visible and assessable.", keys: "voice video comment peer feedback debate argue persuade exhibition maths presentation collaboration town hall" },
     { name: "Make Beliefs Comix", fam: "comic", url: "https://makebeliefscomix.com", color: "#E8604C", tag: "Comic strips in many languages",
       what: "A free, easy online comic creator with characters in different moods, speech and thought bubbles, and backgrounds. It supports several languages and offers printables, writing prompts and resources for special needs.",
-      pyp: ["Turn the storyboard into a comic strip", "Show two perspectives in a dialogue (the bird and the builder)", "Multilingual learners write in more than one language", "Maths word-problem comics"],
-      steps: ["Choose the number of panels.", "Pick characters and their emotions.", "Write dialogue using words from the word bank.", "Print, save or share the finished strip."],
-      tip: "Use the free printable comic templates as the non-digital twin.", keys: "comic draw dialogue multilingual language printable perspective maths" },
+      pyp: ["A two-voice comic: the sparrow and the principal in dialogue", "Thought bubbles show what each character really thinks", "Multilingual learners write in more than one language", "Maths word-problem comics"],
+      steps: ["Choose the number of panels.", "Pick characters and their emotions.", "Write dialogue using precise words and one metaphor.", "Print, save or share the finished strip."],
+      tip: "Use speech bubbles for what characters say and thought bubbles for what they hide: instant inference.", keys: "comic draw dialogue multilingual language printable perspective two voices argue maths" },
     { name: "Boomwriter", fam: "comic", url: "https://boomwriter.com", color: "#E8604C", tag: "Write · vote · publish",
-      what: "Collaborative writing: the class reads a story start, everyone writes the next chapter, peers vote anonymously and the top chapter joins the story. Teachers give feedback as learners write. Finished books can be printed with each child’s own ending (printed copies are optional and paid).",
+      what: "Collaborative writing: the class reads a story start, everyone writes the next chapter, peers vote anonymously and the top chapter joins the story. Teachers give feedback as learners write. Printed books are optional and paid.",
       pyp: ["Continue “The Fig Tree” as a class novel", "Persuasive or report writing linked to a Unit of Inquiry", "Peer evaluation builds critical thinking"],
       steps: ["Choose a story starter or write your own.", "Learners read the story so far and write the next chapter.", "Give feedback while they write.", "Learners vote anonymously; repeat chapter by chapter, then publish."],
       tip: "boomwriter.com (US) and boomwriter.co.uk (UK) are separate companies; check which one your school uses.", keys: "collaborative writing vote peer feedback publish book chapter persuasive" },
     { name: "Digital Films", fam: "film", url: "", color: "#1F8A82", tag: "Animate & share online",
       what: "Create a digital animation of a story and embed it into a classroom website or blog to share with families. Easy to use, with examples to follow.",
-      pyp: ["Animated retellings published on the class blog", "Learners share their work with parents at home"],
+      pyp: ["Animated two-voice retellings published on the class blog", "Learners share their work with parents at home"],
       steps: ["Plan scenes from the storyboard.", "Animate each scene.", "Embed the film on the class website or blog."],
       tip: "Families become a real audience, which is a powerful motivator.", keys: "film animation blog website families share movie" },
     { name: "HUE Animation", fam: "film", url: "https://huehd.com/animation/", color: "#1F8A82", tag: "Storyboards & stop-motion",
       what: "A stop-motion animation kit: flexible USB camera with built-in microphone, Stop Motion Studio software (onion skin, voice-over, green screen), an animation book, plus printable storyboards, backgrounds and cut-outs. Designed for ages 7+.",
-      pyp: ["Science: life cycles, the water cycle (free activity guides)", "Clay or paper cut-out retellings", "Time-lapse of a plant growing"],
+      pyp: ["Science: life cycles, the water cycle (free activity guides)", "Stop-motion of the school yard before and after, with two narrators", "Time-lapse of a plant growing"],
       steps: ["Storyboard each frame (number it and describe it).", "Build the set and characters.", "Capture frames, using onion skin to keep movement smooth.", "Add voice, sound effects and titles; play it back."],
-      tip: "Pair younger learners and give each a role: director, animator, voice.", keys: "stop motion animation clay science life cycle water cycle camera storyboard" },
+      tip: "Give each learner a role: director, animator, narrator, sound designer.", keys: "stop motion animation clay science life cycle water cycle camera storyboard" },
     { name: "Powtoon", fam: "film", url: "https://www.powtoon.com/edu-home/", color: "#1F8A82", tag: "Animated videos & presentations",
       what: "Create animated videos and presentations from ready-made templates, characters, footage and music. EDU plans offer student accounts with teacher access; free sign-up is available.",
-      pyp: ["Explainer videos for a central idea", "A “Protect our trees” public-service message", "PE: the rules of a game"],
-      steps: ["Pick a template or start blank.", "Script scenes from the storyboard.", "Add characters, text and voice-over.", "Share with the class or families."],
-      tip: "Check age requirements and use teacher-managed accounts.", keys: "video animation presentation explain PE rules persuade message" }
+      pyp: ["A 60-second public-service message: the class’s fair solution", "Explainer videos for a central idea", "PE: the rules of a game"],
+      steps: ["Pick a template or start blank.", "Script scenes from the storyboard or town-hall pitch.", "Add characters, text and voice-over.", "Share with the school community."],
+      tip: "Check age requirements and use teacher-managed accounts.", keys: "video animation presentation explain PE rules persuade message call to action" }
   ];
   apps.forEach(function(a){ if (a.name === "Digital Films" && DIGITAL_FILMS_URL) a.url = DIGITAL_FILMS_URL; });
   var famLabel = { voice: "Story & Voice", comic: "Comics & Collaboration", film: "Film & Animation" };
-  $("#appGrid").innerHTML = apps.map(function(a, i){
+  $("#appGrid").innerHTML = apps.map(function(a){
     return '<article class="card app" data-fam="' + a.fam + '" data-keys="' + esc((a.name + " " + a.keys + " " + a.what).toLowerCase()) + '">' +
       '<span class="badge" style="background:' + a.color + ';align-self:flex-start">' + famLabel[a.fam] + '</span>' +
       '<h3>' + esc(a.name) + '</h3><p class="tag">' + esc(a.tag) + '</p><p>' + esc(a.what) + '</p>' +
-      '<details><summary>In the PYP classroom &amp; how to lead learners</summary>' +
+      '<details><summary>Classroom ideas &amp; how to lead learners</summary>' +
       '<p><b>Ideas</b></p><ul>' + a.pyp.map(function(x){ return "<li>" + esc(x) + "</li>"; }).join("") + '</ul>' +
       '<p><b>Lead your learners</b></p><ol>' + a.steps.map(function(x){ return "<li>" + esc(x) + "</li>"; }).join("") + '</ol>' +
       '<p class="note"><b>Tip:</b> ' + esc(a.tip) + '</p></details>' +
-      (a.url ? '<p style="margin:.8em 0 0"><a class="btn" style="display:inline-flex;align-items:center;text-decoration:none" href="' + a.url + '" target="_blank" rel="noopener" aria-label="Visit the ' + esc(a.name) + ' website">Visit website ↗</a></p>' : '') +
+      (a.url ? '<p style="margin:.8em 0 0"><a class="btn" style="display:inline-flex;align-items:center;text-decoration:none" href="' + a.url + '" target="_blank" rel="noopener" aria-label="Visit the ' + esc(a.name) + ' website">' + (a.url.indexOf("commonsensemedia")>-1 ? "Read app review ↗" : "Visit website ↗") + '</a></p>' : '') +
       '</article>';
   }).join("");
   var fam = "all";
@@ -604,13 +752,14 @@ footer{padding:36px 0;color:var(--muted);font-size:.95rem}
   $("#appSearch").addEventListener("input", filterApps);
   filterApps();
 
-  // ---------- Chooser ----------
+  // Chooser
   var chooser = {
-    speak: ["Little Bird Tales · VoiceThread", "Puppet theatre · partner read-aloud", "Learners narrate their bird’s-eye story page by page, then listen back and set one fluency goal."],
-    sequence: ["Make Beliefs Comix · HUE storyboard", "Paper comic strip · 6-panel template", "Retell the text in six panels with one caption each using a collected word."],
+    speak: ["Little Bird Tales · VoiceThread", "Puppet theatre · partner read-aloud", "Narrate the two-voice story page by page, then listen back and set one fluency goal."],
+    sequence: ["Make Beliefs Comix · HUE storyboard", "Paper comic strip · 6-panel template", "Retell the event in six panels, captioning each with a precise word or metaphor."],
     collab: ["Boomwriter · VoiceThread", "Gallery walk with sticky notes · round-robin writing", "Each group writes the next chapter; peers give TAG feedback before voting."],
     explain: ["Powtoon · Digital Films", "Freeze-frame tableau · poster talk", "Create a 60-second explainer of the central idea for a younger class."],
-    life: ["HUE Animation", "Paper cut-out flipbook · role-play", "Animate a life cycle or habitat change in 12–20 frames with a voice-over."],
+    argue: ["VoiceThread · Make Beliefs Comix", "Stakeholder Town Hall · persuasive letter", "Each group argues for one stakeholder with a claim, evidence, counterargument and call to action."],
+    life: ["HUE Animation", "Paper cut-out flipbook · role-play", "Animate a habitat change in 12–20 frames with two narrators."],
     multi: ["Make Beliefs Comix (multiple languages) · Little Bird Tales", "Bilingual word wall · dual-language picture book", "Write the comic dialogue in the home language and in English, side by side."]
   };
   $("#intent").addEventListener("change", function(){
@@ -619,7 +768,7 @@ footer{padding:36px 0;color:var(--muted);font-size:.95rem}
     out.innerHTML = '<div class="grid g3"><div class="card tint"><b>Try digital</b><p>' + r[0] + '</p></div><div class="card tint"><b>Or go non-digital</b><p>' + r[1] + '</p></div><div class="card tint"><b>Starter task</b><p>' + r[2] + '</p></div></div>';
   });
 
-  // ---------- Responsible checklist ----------
+  // Responsible checklist
   var resp = [
     "Ideas start in talk and on paper before any app is opened.",
     "I have checked the platform against our school’s data-protection policy.",
@@ -640,11 +789,11 @@ footer{padding:36px 0;color:var(--muted);font-size:.95rem}
   try { var rs = JSON.parse(store.get("resp") || "[]"); $$("#respList input").forEach(function(b, i){ b.checked = !!rs[i]; }); } catch(e){}
   $("#respList").addEventListener("change", updResp); updResp();
 
-  // ---------- TAG stems ----------
+  // TAG stems
   var stems = [
-    "Tell: I really like the way you…", "Tell: Your word choice ___ made me feel…", "Tell: The part that stayed with me was…",
-    "Ask: I wonder why the bird…", "Ask: What would happen if…?", "Ask: How did you decide to…?",
-    "Give: You could try adding a feeling word to panel…", "Give: Next time, maybe show what the bird sees in…", "Give: A stronger word here might be…"
+    "Tell: Your evidence from the text really convinced me because…", "Tell: The metaphor ___ helped me picture…", "Tell: I liked how you answered the other side by…",
+    "Ask: What would the ___ say to your argument?", "Ask: Which detail in the text best supports…?", "Ask: How did you decide what was fair?",
+    "Give: You could strengthen your claim by adding…", "Give: Try a more precise word than ___, such as…", "Give: Your call to action could be more realistic if…"
   ];
   var lastStem = -1;
   $("#stemBtn").addEventListener("click", function(){
@@ -652,8 +801,8 @@ footer{padding:36px 0;color:var(--muted);font-size:.95rem}
     lastStem = i; $("#stemOut").textContent = "“" + stems[i] + "”";
   });
 
-  // ---------- Planner ----------
-  var planIds = [["pUnit", "Unit / theme"], ["pGrade", "Grade / subject"], ["p1", "1 Learning intention"], ["p2", "2 Meaningful learner task"], ["p3", "3 Opportunities for agency"], ["p4", "4 Resources"], ["p5", "5 Evidence of learning"], ["p6", "Exit ticket"]];
+  // Planner
+  var planIds = [["pUnit", "Unit / theme"], ["pGrade", "Class / subject"], ["p1", "1 Learning intention"], ["p2", "2 Meaningful learner task"], ["p3", "3 Opportunities for agency"], ["p4", "4 Resources"], ["p5", "5 Evidence of learning"], ["p6", "Exit ticket"]];
   function planText(){
     return "Inquiry-to-Creation Learning Plan · From Reading to Writing (IBSEA 2026)\n\n" + planIds.map(function(p){ return p[1] + ":\n" + ($("#" + p[0]).value.trim() || "-") + "\n"; }).join("\n");
   }
@@ -669,13 +818,13 @@ footer{padding:36px 0;color:var(--muted);font-size:.95rem}
     a.href = URL.createObjectURL(blob); a.download = "Inquiry-to-Creation-plan.txt"; document.body.appendChild(a); a.click();
     setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 500); planMsg("Downloaded.");
   });
-  var example = { pUnit: "Sharing the planet", pGrade: "Grade 3 · English & UOI",
-    p1: "Explain how humans affect habitats, from another perspective.",
-    p2: "A narrated story from the bird’s point of view, shared with families.",
-    p3: "Learners choose the mode (speak, draw, move, publish) and co-create success criteria.",
-    p4: "Mentor text “The Fig Tree”, 6-panel storyboard, Little Bird Tales, or paper puppets as a non-digital option.",
-    p5: "Observation of reading roles, storyboard, recording, TAG comments, single-point rubric.",
-    p6: "Try the storyboard-before-app routine with my class." };
+  var example = { pUnit: "Sharing the planet", pGrade: "English & UOI",
+    p1: "Explain how a human decision affects an ecosystem, from two points of view.",
+    p2: "A two-voice comic or narrated debate, shared with the school community.",
+    p3: "Learners choose the mode, co-create success criteria and propose a fair solution.",
+    p4: "Mentor text “The Fig Tree”, two-voice storyboard, stakeholder cards, Make Beliefs Comix or VoiceThread.",
+    p5: "Reading-role talk, storyboard, town-hall pitch, drafts, VoiceThread comments, single-point rubric.",
+    p6: "Try a stakeholder town hall before persuasive writing." };
   $("#exampleFill").addEventListener("click", function(){
     Object.keys(example).forEach(function(k){ var el = $("#" + k); if (!el.value.trim()) { el.value = example[k]; store.set(k, el.value); } });
     planMsg("Example added to empty fields. Edit it for your own unit.");
@@ -686,7 +835,7 @@ footer{padding:36px 0;color:var(--muted);font-size:.95rem}
   });
   $("#planForm").addEventListener("submit", function(e){ e.preventDefault(); });
 
-  // ---------- Print a section ----------
+  // Print a section
   $$("[data-print]").forEach(function(b){
     b.addEventListener("click", function(){
       var id = b.dataset.print;
@@ -697,7 +846,7 @@ footer{padding:36px 0;color:var(--muted);font-size:.95rem}
   });
   window.addEventListener("afterprint", function(){ document.body.classList.remove("printing"); $$("section").forEach(function(s){ s.classList.remove("print-target"); }); });
 
-  // ---------- Timer ----------
+  // Timer
   var total = 480, left = 480, tick = null, endAt = 0;
   function fmt(s){ s = Math.max(0, Math.round(s)); var m = Math.floor(s / 60), r = s % 60; return (m < 10 ? "0" : "") + m + ":" + (r < 10 ? "0" : "") + r; }
   function draw(){ $("#tFace").textContent = fmt(left); }
@@ -718,7 +867,7 @@ footer{padding:36px 0;color:var(--muted);font-size:.95rem}
   $("#tReset").addEventListener("click", function(){ stop(); left = total; draw(); $("#tStatus").textContent = "Reset."; });
   draw();
 
-  // ---------- Active nav ----------
+  // Active nav
   if ("IntersectionObserver" in window) {
     var links = $$("nav.toc a");
     var io = new IntersectionObserver(function(entries){
