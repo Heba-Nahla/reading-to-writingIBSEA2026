@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>From Reading to Writing · Take-Away Kit · IBSEA 2026</title>
+<meta name="description" content="Interactive take-away kit for the IBSEA 2026 workshop 'From Reading to Writing: Helping Learners Find Their Voice in a Digital World'.">
+<style>
+:root{
+  --ink:#2A1B3D;--ink2:#3B2A55;--lav:#F4F0F9;--line:#E2DAEE;--muted:#5E5573;
+  --coral:#E8604C;--mari:#F2A541;--teal:#1F8A82;--berry:#C2457A;--green:#3E8E5E;--violet:#7B5EA7;--amber:#B86E08;
+  --bg:#FFFFFF;--card:#FFFFFF;--text:#2A1B3D;--radius:16px;--shadow:0 4px 16px rgba(42,27,61,.10);
+}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#1C1229;--card:#2A1B3D;--lav:#33244A;--line:#4A3A63;--text:#F3EEF9;--muted:#C9BFD9;--shadow:0 4px 16px rgba(0,0,0,.35);--teal:#3FC1B6;--violet:#B49AE0;--berry:#E77BA8;--amber:#F2A541;--green:#6CC08F}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Calibri,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55;font-size:17px}
+h1,h2,h3{font-family:Cambria,Georgia,serif;line-height:1.2;margin:0 0 .5em}
+h2{font-size:clamp(1.6rem,3.5vw,2.2rem)}
+h3{font-size:1.2rem}
+a{color:var(--violet)}
+.skip{position:absolute;left:-999px;top:0;background:var(--mari);color:#2A1B3D;padding:.6rem 1rem;z-index:99;border-radius:0 0 8px 0}
+.skip:focus{left:0}
+:focus-visible{outline:3px solid var(--mari);outline-offset:2px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header.hero{background:#2A1B3D;color:#fff;padding:56px 0 40px}
+.kicker{color:#F2A541;font-weight:700;letter-spacing:.14em;font-size:.8rem;text-transform:uppercase}
+.hero h1{font-size:clamp(2.1rem,6vw,3.6rem);margin:.2em 0 .2em;color:#fff}
+.hero p.sub{font-size:clamp(1.1rem,2.4vw,1.4rem);color:#F6D7A7;margin:0 0 .4em}
+.hero p.meta{color:#DCD3EA;margin:.2em 0}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.pill{border-radius:999px;padding:.45rem 1rem;font-weight:700;font-size:.95rem}
+nav.toc{position:sticky;top:0;z-index:20;background:var(--card);border-bottom:1px solid var(--line);box-shadow:var(--shadow)}
+nav.toc ul{list-style:none;margin:0;padding:8px 20px;display:flex;gap:6px;overflow-x:auto;max-width:1120px;margin:0 auto;scrollbar-width:thin}
+nav.toc a{display:block;white-space:nowrap;text-decoration:none;color:var(--text);padding:.45rem .8rem;border-radius:999px;font-weight:600;font-size:.92rem}
+nav.toc a:hover,nav.toc a.active{background:var(--lav)}
+section{padding:56px 0;border-bottom:1px solid var(--line);scroll-margin-top:56px}
+section .lead{color:var(--muted);max-width:760px;margin-top:-.2em}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+.card.tint{background:var(--lav)}
+.badge{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:.2rem .7rem;color:#fff}
+.dot{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:700;font-size:1.1rem;flex:none}
+.row{display:flex;gap:14px;align-items:flex-start}
+.timeline{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr))}
+.stage{border-radius:14px;padding:14px;color:#fff}
+.stage b{display:block;font-size:.85rem;opacity:.95}
+.stage span{font-weight:700}
+.btn{appearance:none;border:2px solid var(--violet);background:transparent;color:var(--text);font:inherit;font-weight:700;border-radius:999px;padding:.5rem 1.1rem;cursor:pointer;min-height:44px}
+.btn.primary{background:var(--violet);color:#fff}
+.btn:hover{filter:brightness(1.08)}
+.btn[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+@media (prefers-color-scheme: dark){.btn[aria-pressed="true"]{background:#F2A541;color:#2A1B3D;border-color:#F2A541}}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0}
+label{font-weight:700;display:block;margin:.6rem 0 .25rem}
+input[type=text],input[type=search],textarea,select{width:100%;font:inherit;color:var(--text);background:var(--card);border:2px solid var(--line);border-radius:10px;padding:.55rem .7rem}
+textarea{min-height:70px;resize:vertical}
+.mentor{font-family:Cambria,Georgia,serif;font-size:1.15rem;line-height:1.7}
+.app{display:flex;flex-direction:column}
+.app h3{margin:.3em 0 .1em}
+.app .tag{font-style:italic;color:var(--muted);margin:0 0 .6em}
+.app details{margin-top:auto;border-top:1px solid var(--line);padding-top:10px}
+.app summary{cursor:pointer;font-weight:700;color:var(--violet);min-height:32px}
+.app ol{padding-left:1.2em;margin:.4em 0}
+.hidden{display:none!important}
+.panels{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.panel{border:2px solid var(--line);border-radius:14px;padding:10px;background:var(--card)}
+.panel canvas{width:100%;aspect-ratio:4/3;background:#fff;border-radius:8px;border:1px dashed #CFC4DE;touch-action:none;display:block}
+.panel .ph{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:6px}
+.num{background:var(--berry);color:#fff;border-radius:50%;width:30px;height:30px;display:grid;place-items:center;font-weight:700;flex:none}
+.tbl{width:100%;border-collapse:collapse;font-size:1rem}
+.tbl th,.tbl td{border:1px solid var(--line);padding:.6rem .7rem;text-align:left;vertical-align:top}
+.tbl th{background:#2A1B3D;color:#fff}
+.tablewrap{overflow-x:auto}
+.result{margin-top:14px}
+.timerface{font-size:clamp(3rem,12vw,6rem);font-weight:700;font-variant-numeric:tabular-nums;text-align:center;font-family:Cambria,Georgia,serif}
+.check{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px dashed var(--line)}
+.check input{width:22px;height:22px;margin-top:3px;flex:none}
+.progress{height:12px;background:var(--lav);border-radius:999px;overflow:hidden}
+.progress > div{height:100%;background:var(--green);width:0;transition:width .3s}
+.note{font-size:.92rem;color:var(--muted)}
+.chiprow{display:flex;flex-wrap:wrap;gap:8px}
+.callout{background:#2A1B3D;color:#fff;border-radius:var(--radius);padding:18px 20px}
+.callout b{color:#F2A541}
+footer{padding:36px 0;color:var(--muted);font-size:.95rem}
+.msg{min-height:1.4em;font-weight:700;color:var(--green)}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{
+  nav.toc,.toolbar,.noprint,header.hero .pills,footer{display:none!important}
+  body.printing section:not(.print-target),body.printing header{display:none!important}
+  section{border:0;padding:12px 0}
+  .card{box-shadow:none}
+  body{font-size:12pt;background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="kicker">IBSEA 2026 · Interactive workshop · Take-Away Kit</div>
+    <h1>From Reading to Writing</h1>
+    <p class="sub">Helping Learners Find Their Voice in a Digital World</p>
+    <p class="meta">Integrating literacy, inquiry and multimodal expression in the PYP</p>
+    <p class="meta">Nahla Yehia (PYP Homeroom Teacher) &amp; Heba Mansour (English Language Teacher) · EIS Fifth Settlement</p>
+    <div class="pills">
+      <a class="pill" style="background:#F2A541;color:#2A1B3D;text-decoration:none" href="#plan">Open the planner</a>
+      <a class="pill" style="background:#E8604C;color:#fff;text-decoration:none" href="#apps">Explore the apps</a>
+      <a class="pill" style="background:#1F8A82;color:#fff;text-decoration:none" href="#timer">Classroom timer</a>
+    </div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Kit sections">
+  <ul>
+    <li><a href="#journey">Journey</a></li>
+    <li><a href="#pathway">Voice Pathway</a></li>
+    <li><a href="#read">Read</a></li>
+    <li><a href="#storyboard">Storyboard</a></li>
+    <li><a href="#apps">Apps</a></li>
+    <li><a href="#chooser">Tool chooser</a></li>
+    <li><a href="#responsible">Responsible use</a></li>
+    <li><a href="#reflect">Feedback &amp; reflection</a></li>
+    <li><a href="#transfer">Any subject</a></li>
+    <li><a href="#plan">Planner</a></li>
+    <li><a href="#timer">Timer</a></li>
+    <li><a href="#refs">References</a></li>
+  </ul>
+</nav>
+
+<main id="main">
+
+<!-- JOURNEY -->
+<section id="journey"><div class="wrap">
+  <h2>Our 60-minute journey</h2>
+  <p class="lead">The session follows the same pathway we use with learners: experience it first, then plan it for your own class.</p>
+  <div class="timeline">
+    <div class="stage" style="background:#E8604C"><b>0–5 min</b><span>Opening &amp; Provocation</span></div>
+    <div class="stage" style="background:#B86E08"><b>5–10 min</b><span>Connecting Inquiry &amp; Literacy</span></div>
+    <div class="stage" style="background:#1F8A82"><b>10–20 min</b><span>Investigate: Read Beyond the Words</span></div>
+    <div class="stage" style="background:#C2457A"><b>20–30 min</b><span>Compose: Transform Reading into Writing</span></div>
+    <div class="stage" style="background:#8A5A00"><b>30–40 min</b><span>Reimagine: One Text, Multiple Voices</span></div>
+    <div class="stage" style="background:#3E8E5E"><b>40–50 min</b><span>Publish &amp; Reflect</span></div>
+    <div class="stage" style="background:#7B5EA7"><b>50–60 min</b><span>Transfer to Classroom Practice</span></div>
+  </div>
+  <div class="grid g2" style="margin-top:20px">
+    <div class="card tint"><h3>Learning intentions</h3>
+      <ol>
+        <li>Identify opportunities to integrate reading, writing and communication into meaningful inquiry.</li>
+        <li>Explore how homeroom and language teachers can co-support literacy within Units of Inquiry.</li>
+        <li>Design a learning experience that connects inquiry, literacy and creative expression.</li>
+        <li>Identify opportunities for student voice, choice and ownership.</li>
+        <li>Select digital or non-digital tools based on learning intentions.</li>
+        <li>Identify meaningful evidence of learning through feedback, assessment and reflection.</li>
+      </ol></div>
+    <div class="card"><h3>Two lenses, one learner</h3>
+      <p><b style="color:var(--teal)">Homeroom lens:</b> conceptual understanding, transdisciplinary themes, inquiry that leads to action.</p>
+      <p><b style="color:var(--coral)">Language lens:</b> vocabulary and structures, genre, purpose and audience, targeted feedback on writing.</p>
+      <div class="callout"><b>Together:</b> concepts give language a purpose, and language gives concepts a voice.</div>
+    </div>
+  </div>
+</div></section>
+
+<!-- PATHWAY -->
+<section id="pathway"><div class="wrap">
+  <h2>The Voice Pathway</h2>
+  <p class="lead">Five steps from reading to writing. Learner agency (voice, choice and ownership) runs through every step.</p>
+  <div class="grid g3" id="pathwayGrid"></div>
+  <div class="card tint" style="margin-top:18px">
+    <h3>Worked example · Sharing the planet</h3>
+    <p><b>Central idea:</b> Living things depend on each other and on their environment.</p>
+    <p><b>Lines of inquiry:</b> how living things depend on one another · how human choices change habitats · our responsibility to protect living things.</p>
+    <p><b>Key concepts:</b> Connection, Causation, Responsibility · <b>Learner profile:</b> Caring, Communicators · <b>ATL:</b> Thinking, Communication, Research</p>
+    <p class="note">This is an editable example. Swap in any unit from your own Programme of Inquiry; the pathway stays the same.</p>
+  </div>
+</div></section>
+
+<!-- READ -->
+<section id="read"><div class="wrap">
+  <h2>Investigate: Read beyond the words</h2>
+  <div class="grid g2">
+    <div class="card">
+      <span class="badge" style="background:var(--teal)">Mentor text</span>
+      <h3 style="margin-top:.6em">The Fig Tree</h3>
+      <div class="mentor">
+        <p>For forty years, the old fig tree stood beside the school wall. Sparrows built nests in its arms, and children ate their lunch in its cool shade.</p>
+        <p>On Monday morning, a yellow machine rumbled through the gate. By Friday, only a stump remained.</p>
+        <p>On the empty wall, a small bird sat very still, looking at the place where its home used to be.</p>
+      </div>
+      <p class="note">An original short text written for this workshop. You may reuse and adapt it freely.</p>
+      <div class="toolbar noprint">
+        <button class="btn" type="button" id="readAloud">🔊 Read aloud</button>
+        <button class="btn" type="button" data-print="read">🖨 Print this section</button>
+      </div>
+    </div>
+    <div class="card tint">
+      <h3>Reading roles (groups of 4)</h3>
+      <div class="grid" style="gap:10px">
+        <div class="row"><div class="dot" style="background:var(--violet)">?</div><div><b>Questioner</b><br>Leads See · Think · Wonder.</div></div>
+        <div class="row"><div class="dot" style="background:var(--coral)">W</div><div><b>Word Collector</b><br>Gathers 5 powerful words and builds a word cline.</div></div>
+        <div class="row"><div class="dot" style="background:var(--teal)">C</div><div><b>Connector</b><br>Links the text to the central idea.</div></div>
+        <div class="row"><div class="dot" style="background:#B86E08">R</div><div><b>Reporter</b><br>Shares one wonder with the room.</div></div>
+      </div>
+      <h3 style="margin-top:1em">Four ways to read beyond the words</h3>
+      <ul>
+        <li><b>See · Think · Wonder:</b> a visible-thinking routine that slows reading down.</li>
+        <li><b>Vocabulary detectives:</b> collect powerful words; order them on a word cline.</li>
+        <li><b>Question the author:</b> Whose voice is missing? What does the author want us to feel?</li>
+        <li><b>Change the lens:</b> retell one moment through another character’s eyes.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="grid g3" style="margin-top:16px">
+    <div class="card"><label for="see">I see…</label><textarea id="see" data-save></textarea></div>
+    <div class="card"><label for="think">I think…</label><textarea id="think" data-save></textarea></div>
+    <div class="card"><label for="wonder">I wonder…</label><textarea id="wonder" data-save></textarea></div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Word cline builder</h3>
+    <p class="note">Add three to five words and arrange them from weakest to strongest (e.g. sad → upset → heartbroken).</p>
+    <div class="toolbar noprint">
+      <label for="clineWord" class="hidden">New word</label>
+      <input type="text" id="clineWord" placeholder="Type a word, then select Add" style="max-width:320px" aria-label="New word for the word cline">
+      <button class="btn primary" type="button" id="clineAdd">Add</button>
+      <button class="btn" type="button" id="clineClear">Clear</button>
+    </div>
+    <ol id="clineList" class="chiprow" style="list-style:none;padding:0" aria-live="polite"></ol>
+    <p class="msg" id="clineMsg" role="status"></p>
+  </div>
+</div></section>
+
+<!-- STORYBOARD -->
+<section id="storyboard"><div class="wrap">
+  <h2>Compose: the story through the bird’s eyes</h2>
+  <p class="lead">Talk it → word bank → sentence frames → storyboard → draft &amp; TAG. Sketch in each panel (finger, stylus or mouse) and add a caption, or print a blank copy for paper.</p>
+  <div class="card tint" style="margin-bottom:16px">
+    <b>Sentence frames:</b> From my branch, I could see… · I felt ___ because ___ . · If I could speak to the people, I would say…
+    <br><b>Success criteria:</b> ✓ clear beginning, middle and end · ✓ a feeling and a reason · ✓ a message for a real audience
+  </div>
+  <div class="toolbar noprint">
+    <button class="btn" type="button" id="clearAll">Clear all drawings</button>
+    <button class="btn primary" type="button" data-print="storyboard">🖨 Print storyboard</button>
+  </div>
+  <div class="panels" id="panels"></div>
+</div></section>
+
+<!-- APPS -->
+<section id="apps"><div class="wrap">
+  <h2>Reimagine: the digital toolbox</h2>
+  <p class="lead">One text, multiple voices. Choose the mode first (speak it, draw it, move it, publish it), then the tool. Before using any tool with students, check your school’s data-protection policy, the platform’s current terms and its age requirements.</p>
+  <div class="toolbar" role="group" aria-label="Filter apps">
+    <button class="btn" type="button" data-filter="all" aria-pressed="true">All</button>
+    <button class="btn" type="button" data-filter="voice" aria-pressed="false">Story &amp; Voice</button>
+    <button class="btn" type="button" data-filter="comic" aria-pressed="false">Comics &amp; Collaboration</button>
+    <button class="btn" type="button" data-filter="film" aria-pressed="false">Film &amp; Animation</button>
+  </div>
+  <label for="appSearch">Search apps</label>
+  <input type="search" id="appSearch" placeholder="e.g. voice, comic, peer feedback, maths">
+  <p class="note" id="appCount" aria-live="polite"></p>
+  <div class="grid g3" id="appGrid"></div>
+</div></section>
+
+<!-- CHOOSER -->
+<section id="chooser"><div class="wrap">
+  <h2>Tool chooser: purpose before platform</h2>
+  <p class="lead">Start with what your learners need to do. Every digital option has a non-digital twin, so no learner is excluded.</p>
+  <div class="card">
+    <label for="intent">My learners need to…</label>
+    <select id="intent">
+      <option value="">Choose a learning intention</option>
+      <option value="speak">Speak with fluency and expression</option>
+      <option value="sequence">Sequence and summarise</option>
+      <option value="collab">Collaborate and give peer feedback</option>
+      <option value="explain">Explain a concept to an audience</option>
+      <option value="life">Bring characters and processes to life</option>
+      <option value="multi">Express ideas in more than one language</option>
+    </select>
+    <div class="result" id="intentResult" aria-live="polite"></div>
+  </div>
+  <div class="tablewrap" style="margin-top:16px">
+    <table class="tbl">
+      <thead><tr><th scope="col">If my learners need to…</th><th scope="col">Try digital</th><th scope="col">Or go non-digital</th></tr></thead>
+      <tbody>
+        <tr><td><b>Speak with fluency &amp; expression</b></td><td>Little Bird Tales · VoiceThread</td><td>Puppet theatre · partner read-aloud</td></tr>
+        <tr><td><b>Sequence &amp; summarise</b></td><td>Make Beliefs Comix · HUE storyboard</td><td>Paper comic strip · 6-panel template</td></tr>
+        <tr><td><b>Collaborate &amp; give peer feedback</b></td><td>Boomwriter · VoiceThread</td><td>Gallery walk · round-robin writing</td></tr>
+        <tr><td><b>Explain a concept to an audience</b></td><td>Powtoon · Digital Films</td><td>Freeze-frame tableau · poster talk</td></tr>
+        <tr><td><b>Bring characters &amp; processes to life</b></td><td>HUE Animation</td><td>Paper cut-out flipbook · role-play</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div></section>
+
+<!-- RESPONSIBLE -->
+<section id="responsible"><div class="wrap">
+  <h2>Responsible digital voices, including AI</h2>
+  <p class="lead">UNESCO’s guidance calls for human-centred, age-appropriate and ethically considered use of generative AI in education. Use this checklist before any digital publishing project.</p>
+  <div class="card">
+    <div class="progress" aria-hidden="true"><div id="respBar"></div></div>
+    <p class="note" id="respStatus" role="status">0 of 8 checked</p>
+    <div id="respList"></div>
+  </div>
+  <div class="callout" style="margin-top:16px"><b>The voice check:</b> can the learner explain it, in their own words, without the tool?</div>
+</div></section>
+
+<!-- REFLECT -->
+<section id="reflect"><div class="wrap">
+  <h2>Publish &amp; reflect</h2>
+  <div class="grid g2">
+    <div class="card">
+      <h3>TAG feedback</h3>
+      <p><b style="color:var(--coral)">T · Tell</b> something you like</p>
+      <p><b style="color:var(--teal)">A · Ask</b> a question you wonder about</p>
+      <p><b style="color:var(--violet)">G · Give</b> a kind, specific suggestion</p>
+      <div class="toolbar noprint"><button class="btn primary" type="button" id="stemBtn">Give me a sentence stem</button></div>
+      <p id="stemOut" aria-live="polite" style="font-size:1.15rem;font-style:italic"></p>
+    </div>
+    <div class="card tint">
+      <h3>3 · 2 · 1 reflection</h3>
+      <label for="r3">3 things I noticed about learners’ voice</label><textarea id="r3" data-save></textarea>
+      <label for="r2">2 ideas I will adapt for my class</label><textarea id="r2" data-save></textarea>
+      <label for="r1">1 question I still have</label><textarea id="r1" data-save></textarea>
+    </div>
+  </div>
+  <div class="grid g3" style="margin-top:16px">
+    <div class="card"><h3 style="color:var(--coral)">Voice</h3><p>Learners choose the message they want the audience to hear.</p></div>
+    <div class="card"><h3 style="color:var(--teal)">Choice</h3><p>Learners choose the mode: speak, draw, move or publish.</p></div>
+    <div class="card"><h3 style="color:var(--violet)">Ownership</h3><p>Learners co-create success criteria and judge their own drafts.</p></div>
+  </div>
+  <div class="card tint" style="margin-top:16px">
+    <h3>Evidence of learning</h3>
+    <p><b>Monitor:</b> observe talk in reading roles; listen for perspective language. <b>Document:</b> storyboards, drafts, recordings, VoiceThread comments. <b>Measure:</b> a single-point rubric based on co-created success criteria.</p>
+  </div>
+</div></section>
+
+<!-- TRANSFER -->
+<section id="transfer"><div class="wrap">
+  <h2>Same pathway, any subject</h2>
+  <div class="grid g3">
+    <div class="card"><h3 style="color:var(--coral)">Mathematics</h3><p>Word-problem comics; learners explain a strategy aloud in VoiceThread.</p></div>
+    <div class="card"><h3 style="color:var(--teal)">Science</h3><p>Stop-motion life cycles or the water cycle with HUE (free activity guides available).</p></div>
+    <div class="card"><h3 style="color:var(--berry)">Arts</h3><p>Narrated gallery: artists record the story behind their work in Little Bird Tales.</p></div>
+    <div class="card"><h3 style="color:#B86E08">Physical Education</h3><p>Comic-strip coaching steps for a skill; a Powtoon explaining the rules of a game.</p></div>
+    <div class="card"><h3 style="color:var(--violet)">Languages</h3><p>Bilingual comics in Make Beliefs Comix; voice books in more than one language.</p></div>
+    <div class="card"><h3 style="color:var(--green)">Unit of Inquiry</h3><p>Persuasive class book in Boomwriter calling for action on a local issue.</p></div>
+  </div>
+</div></section>
+
+<!-- PLANNER -->
+<section id="plan"><div class="wrap">
+  <h2>Your Inquiry-to-Creation learning plan</h2>
+  <p class="lead">Your answers are saved automatically on this device only. Print or save as PDF when you are done.</p>
+  <form id="planForm" class="card" novalidate>
+    <div class="grid g2">
+      <div><label for="pUnit">Unit / transdisciplinary theme</label><input type="text" id="pUnit" data-save placeholder="e.g. Sharing the planet"></div>
+      <div><label for="pGrade">Grade / subject</label><input type="text" id="pGrade" data-save placeholder="e.g. Grade 3 · English & UOI"></div>
+    </div>
+    <label for="p1">1 · Learning intention: what will learners understand and be able to do?</label>
+    <textarea id="p1" data-save placeholder="Example: Explain how humans affect habitats, from another perspective"></textarea>
+    <label for="p2">2 · Meaningful learner task: what will they create, and for whom?</label>
+    <textarea id="p2" data-save placeholder="Example: A narrated story from the bird’s point of view, for families"></textarea>
+    <label for="p3">3 · Opportunities for agency: where is voice, choice and ownership?</label>
+    <textarea id="p3" data-save placeholder="Example: Learners choose the mode and co-create success criteria"></textarea>
+    <label for="p4">4 · Resources: which digital and non-digital tools?</label>
+    <textarea id="p4" data-save placeholder="Example: Mentor text, storyboard, Little Bird Tales or paper puppets"></textarea>
+    <label for="p5">5 · Evidence of learning: how will you monitor, document and measure?</label>
+    <textarea id="p5" data-save placeholder="Example: Storyboard, recording, TAG comments, single-point rubric"></textarea>
+    <label for="p6">Exit ticket: one thing I will try next week</label>
+    <input type="text" id="p6" data-save>
+    <div class="toolbar noprint">
+      <button class="btn primary" type="button" data-print="plan">🖨 Print / save as PDF</button>
+      <button class="btn" type="button" id="copyPlan">Copy as text</button>
+      <button class="btn" type="button" id="dlPlan">Download .txt</button>
+      <button class="btn" type="button" id="exampleFill">Fill with the Fig Tree example</button>
+      <button class="btn" type="button" id="resetPlan">Clear</button>
+    </div>
+    <p class="msg" id="planMsg" role="status"></p>
+  </form>
+</div></section>
+
+<!-- TIMER -->
+<section id="timer"><div class="wrap">
+  <h2>Classroom activity timer</h2>
+  <div class="card" style="max-width:640px;margin:0 auto">
+    <div class="timerface" id="tFace" aria-live="off">08:00</div>
+    <p class="msg" id="tStatus" role="status" style="text-align:center"></p>
+    <div class="toolbar" style="justify-content:center" role="group" aria-label="Timer presets">
+      <button class="btn" type="button" data-min="1">1 min</button>
+      <button class="btn" type="button" data-min="2">2 min</button>
+      <button class="btn" type="button" data-min="5">5 min</button>
+      <button class="btn" type="button" data-min="8">8 min</button>
+      <button class="btn" type="button" data-min="10">10 min</button>
+    </div>
+    <div class="toolbar" style="justify-content:center">
+      <button class="btn primary" type="button" id="tStart">Start</button>
+      <button class="btn" type="button" id="tReset">Reset</button>
+    </div>
+  </div>
+</div></section>
+
+<!-- REFS -->
+<section id="refs"><div class="wrap">
+  <h2>References &amp; academic grounding</h2>
+  <div class="grid g2">
+    <div class="card">
+      <h3>Recommended references</h3>
+      <ol>
+        <li><a href="https://www.ibo.org/programmes/primary-years-programme/curriculum/" target="_blank" rel="noopener">PYP curriculum framework, International Baccalaureate</a>: the three pillars, agency and action.</li>
+        <li><a href="https://www.ibo.org/programmes/primary-years-programme/curriculum/learning-and-teaching/" target="_blank" rel="noopener">Learning and teaching, International Baccalaureate</a>: conceptual inquiry, transdisciplinary learning and ATL.</li>
+        <li><a href="https://ibo.org/programmes/primary-years-programme/curriculum/the-learner/" target="_blank" rel="noopener">The learner, International Baccalaureate</a>: agency and learner ownership.</li>
+        <li><a href="https://ibo.org/globalassets/new-structure/about-the-ib/pdfs/assessment-principles-and-practices---quality-assessment-in-a-digital-age-e.pdf" target="_blank" rel="noopener">Assessment principles and practices: Quality assessment in a digital age</a>: assessment in the PYP.</li>
+        <li><a href="https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research" target="_blank" rel="noopener">UNESCO: Guidance for Generative AI in Education and Research</a>.</li>
+      </ol>
+    </div>
+    <div class="card tint">
+      <h3>Academic grounding</h3>
+      <ul>
+        <li><b>Multiliteracies:</b> The New London Group’s work highlights linguistic and cultural diversity alongside multiple modes of communication.</li>
+        <li><b>Digital writing development:</b> research on digital writing instruction and collaborative composition shows how digital environments support drafting, feedback and revision.</li>
+        <li><b>Responsible educational AI:</b> UNESCO emphasises human-centred, age-appropriate and ethically considered use of generative AI.</li>
+        <li><b>Visible thinking:</b> See · Think · Wonder is a Project Zero thinking routine (Harvard Graduate School of Education).</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+</main>
+<footer><div class="wrap">From Reading to Writing · IBSEA 2026 · Nahla Yehia &amp; Heba Mansour · EIS Fifth Settlement. App names belong to their respective owners; descriptions are for educational guidance only. <a href="#top">Back to top ↑</a></div></footer>
+
+<script>
+(function(){
+  "use strict";
+  // Optional: add the Digital Films link you use (leave empty to hide the button)
+  var DIGITAL_FILMS_URL = "";
+
+  var $ = function(s, r){ return (r || document).querySelector(s); };
+  var $$ = function(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var store = {
+    get: function(k){ try { return localStorage.getItem("r2w_" + k); } catch(e){ return null; } },
+    set: function(k, v){ try { localStorage.setItem("r2w_" + k, v); } catch(e){} },
+    del: function(k){ try { localStorage.removeItem("r2w_" + k); } catch(e){} }
+  };
+  function esc(t){ return String(t).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]; }); }
+
+  // ---------- Pathway ----------
+  var path = [
+    ["Investigate", "Read beyond the words", "See · Think · Wonder, vocabulary detectives, question the author.", "Thinking · Research", "#1F8A82"],
+    ["Compose", "Turn reading into writing", "Talk it, word bank, sentence frames, storyboard, draft.", "Communication", "#C2457A"],
+    ["Reimagine", "One text, many voices", "Speak it, draw it, move it, publish it.", "Thinking · Social", "#B86E08"],
+    ["Publish", "Share with a real audience", "Families, peers, class blog, printed class book.", "Communication · Social", "#3E8E5E"],
+    ["Reflect", "Feedback & next steps", "TAG feedback, 3-2-1 reflection, single-point rubric.", "Self-management", "#7B5EA7"]
+  ];
+  $("#pathwayGrid").innerHTML = path.map(function(p, i){
+    return '<div class="card"><div class="row"><div class="dot" style="background:' + p[4] + '">' + (i + 1) + '</div><div><h3 style="margin:0;color:' + p[4] + '">' + p[0] + '</h3><b>' + p[1] + '</b></div></div><p>' + p[2] + '</p><p class="note">ATL: ' + p[3] + '</p></div>';
+  }).join("");
+
+  // ---------- Autosave ----------
+  $$("[data-save]").forEach(function(el){
+    var v = store.get(el.id); if (v !== null) el.value = v;
+    el.addEventListener("input", function(){ store.set(el.id, el.value); });
+  });
+
+  // ---------- Read aloud ----------
+  var ra = $("#readAloud");
+  if (!("speechSynthesis" in window)) { ra.classList.add("hidden"); }
+  ra.addEventListener("click", function(){
+    if (speechSynthesis.speaking) { speechSynthesis.cancel(); ra.textContent = "🔊 Read aloud"; return; }
+    var u = new SpeechSynthesisUtterance($(".mentor").innerText);
+    u.rate = 0.9; u.lang = "en-GB";
+    u.onend = function(){ ra.textContent = "🔊 Read aloud"; };
+    speechSynthesis.speak(u); ra.textContent = "⏹ Stop";
+  });
+
+  // ---------- Word cline ----------
+  var cline = [];
+  try { cline = JSON.parse(store.get("cline") || "[]"); if (!Array.isArray(cline)) cline = []; } catch(e){ cline = []; }
+  function renderCline(){
+    var list = $("#clineList");
+    list.innerHTML = cline.map(function(w, i){
+      return '<li class="row" style="align-items:center;gap:6px"><span class="pill" style="background:var(--lav);color:var(--text)">' + esc(w) + '</span>' +
+        '<button class="btn" type="button" data-up="' + i + '" aria-label="Move ' + esc(w) + ' weaker" ' + (i === 0 ? "disabled" : "") + '>←</button>' +
+        '<button class="btn" type="button" data-down="' + i + '" aria-label="Move ' + esc(w) + ' stronger" ' + (i === cline.length - 1 ? "disabled" : "") + '>→</button>' +
+        (i < cline.length - 1 ? '<span aria-hidden="true" style="font-weight:700">›</span>' : "") + '</li>';
+    }).join("");
+    store.set("cline", JSON.stringify(cline));
+  }
+  $("#clineAdd").addEventListener("click", addWord);
+  $("#clineWord").addEventListener("keydown", function(e){ if (e.key === "Enter") { e.preventDefault(); addWord(); } });
+  function addWord(){
+    var inp = $("#clineWord"), w = inp.value.trim().slice(0, 30), msg = $("#clineMsg");
+    if (!w) { msg.textContent = "Type a word first."; return; }
+    if (cline.length >= 6) { msg.textContent = "A word cline works best with up to 6 words."; return; }
+    cline.push(w); inp.value = ""; msg.textContent = "Added “" + w + "”."; renderCline(); inp.focus();
+  }
+  $("#clineList").addEventListener("click", function(e){
+    var b = e.target.closest("button"); if (!b) return;
+    var i, j;
+    if (b.dataset.up !== undefined) { i = +b.dataset.up; j = i - 1; }
+    else if (b.dataset.down !== undefined) { i = +b.dataset.down; j = i + 1; }
+    else return;
+    if (j < 0 || j >= cline.length) return;
+    var t = cline[i]; cline[i] = cline[j]; cline[j] = t; renderCline();
+  });
+  $("#clineClear").addEventListener("click", function(){ cline = []; renderCline(); $("#clineMsg").textContent = "Cleared."; });
+  renderCline();
+
+  // ---------- Storyboard ----------
+  var prompts = ["Before: my home", "Monday: the machine", "Friday: the stump", "How I feel", "What I wonder", "My message"];
+  $("#panels").innerHTML = prompts.map(function(p, i){
+    return '<div class="panel"><div class="ph"><div class="row" style="align-items:center;gap:8px"><span class="num">' + (i + 1) + '</span><b>' + p + '</b></div>' +
+      '<button class="btn noprint" type="button" data-clear="' + i + '" style="padding:.3rem .8rem;min-height:36px">Clear</button></div>' +
+      '<canvas width="600" height="450" aria-label="Drawing area for panel ' + (i + 1) + ': ' + p + '" role="img"></canvas>' +
+      '<label for="cap' + i + '">Caption</label><input type="text" id="cap' + i + '" data-save maxlength="140"></div>';
+  }).join("");
+  $$("#panels [data-save]").forEach(function(el){ var v = store.get(el.id); if (v !== null) el.value = v; el.addEventListener("input", function(){ store.set(el.id, el.value); }); });
+  $$("#panels canvas").forEach(function(cv, i){
+    var ctx = cv.getContext("2d"), drawing = false;
+    ctx.lineCap = "round"; ctx.lineJoin = "round"; ctx.lineWidth = 5; ctx.strokeStyle = "#2A1B3D";
+    var saved = store.get("cv" + i);
+    if (saved) { var im = new Image(); im.onload = function(){ ctx.drawImage(im, 0, 0); }; im.src = saved; }
+    function pos(e){ var r = cv.getBoundingClientRect(); return { x: (e.clientX - r.left) * cv.width / r.width, y: (e.clientY - r.top) * cv.height / r.height }; }
+    cv.addEventListener("pointerdown", function(e){ drawing = true; cv.setPointerCapture(e.pointerId); var p = pos(e); ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(p.x + 0.1, p.y + 0.1); ctx.stroke(); });
+    cv.addEventListener("pointermove", function(e){ if (!drawing) return; var p = pos(e); ctx.lineTo(p.x, p.y); ctx.stroke(); });
+    function end(){ if (!drawing) return; drawing = false; try { store.set("cv" + i, cv.toDataURL("image/png")); } catch(err){} }
+    cv.addEventListener("pointerup", end); cv.addEventListener("pointercancel", end); cv.addEventListener("pointerleave", end);
+  });
+  function clearCanvas(i){ var cv = $$("#panels canvas")[i]; cv.getContext("2d").clearRect(0, 0, cv.width, cv.height); store.del("cv" + i); }
+  $("#panels").addEventListener("click", function(e){ var b = e.target.closest("[data-clear]"); if (b) clearCanvas(+b.dataset.clear); });
+  $("#clearAll").addEventListener("click", function(){ for (var i = 0; i < 6; i++) clearCanvas(i); });
+
+  // ---------- Apps ----------
+  var apps = [
+    { name: "Little Bird Tales", fam: "voice", url: "https://www.littlebirdtales.com", color: "#B86E08", tag: "Draw it · write it · tell it",
+      what: "Learners create their own art in the built-in art pad or upload drawings and photos, add text, and record their own voice on every page to make a narrated story book. Bright and simple for younger learners, yet rich enough for older ones.",
+      pyp: ["Narrated retelling of “The Fig Tree” from the bird’s perspective", "A class book where each learner contributes one page", "Reflections and learning journals for portfolios", "Language practice: illustrate a word or phrase and record it"],
+      steps: ["Set up a teacher account (sign-up uses a teacher or parent email).", "Learners plan their pages from the paper storyboard.", "On each page: draw or upload a picture, type the text, record the narration.", "Rehearse once, record once. Then share the finished tale with families."],
+      tip: "Fluency and expression in the recording become visible evidence of reading growth.", keys: "voice narration story book art record oral fluency families portfolio" },
+    { name: "VoiceThread", fam: "voice", url: "https://voicethread.com", color: "#B86E08", tag: "Conversations around media",
+      what: "Upload images, documents or video, and learners respond with voice, video, text or drawings, building a conversation around the work. Ed.VoiceThread describes itself as a platform where students develop critical thinking, communication, collaboration and creativity.",
+      pyp: ["Learners explain their storyboard panels; peers reply with questions", "Maths: explain a strategy aloud", "Summative presentations and the PYP Exhibition"],
+      steps: ["Photograph learners’ storyboards and upload them as a VoiceThread.", "Model one voice comment using a sentence stem.", "Learners comment and reply to each other using TAG.", "Leave audio feedback for each learner."],
+      tip: "Its focus maps neatly onto the ATL skills; name them explicitly with learners.", keys: "voice video comment peer feedback exhibition maths presentation collaboration" },
+    { name: "Make Beliefs Comix", fam: "comic", url: "https://makebeliefscomix.com", color: "#E8604C", tag: "Comic strips in many languages",
+      what: "A free, easy online comic creator with characters in different moods, speech and thought bubbles, and backgrounds. It supports several languages and offers printables, writing prompts and resources for special needs.",
+      pyp: ["Turn the storyboard into a comic strip", "Show two perspectives in a dialogue (the bird and the builder)", "Multilingual learners write in more than one language", "Maths word-problem comics"],
+      steps: ["Choose the number of panels.", "Pick characters and their emotions.", "Write dialogue using words from the word bank.", "Print, save or share the finished strip."],
+      tip: "Use the free printable comic templates as the non-digital twin.", keys: "comic draw dialogue multilingual language printable perspective maths" },
+    { name: "Boomwriter", fam: "comic", url: "https://boomwriter.com", color: "#E8604C", tag: "Write · vote · publish",
+      what: "Collaborative writing: the class reads a story start, everyone writes the next chapter, peers vote anonymously and the top chapter joins the story. Teachers give feedback as learners write. Finished books can be printed with each child’s own ending (printed copies are optional and paid).",
+      pyp: ["Continue “The Fig Tree” as a class novel", "Persuasive or report writing linked to a Unit of Inquiry", "Peer evaluation builds critical thinking"],
+      steps: ["Choose a story starter or write your own.", "Learners read the story so far and write the next chapter.", "Give feedback while they write.", "Learners vote anonymously; repeat chapter by chapter, then publish."],
+      tip: "boomwriter.com (US) and boomwriter.co.uk (UK) are separate companies; check which one your school uses.", keys: "collaborative writing vote peer feedback publish book chapter persuasive" },
+    { name: "Digital Films", fam: "film", url: "", color: "#1F8A82", tag: "Animate & share online",
+      what: "Create a digital animation of a story and embed it into a classroom website or blog to share with families. Easy to use, with examples to follow.",
+      pyp: ["Animated retellings published on the class blog", "Learners share their work with parents at home"],
+      steps: ["Plan scenes from the storyboard.", "Animate each scene.", "Embed the film on the class website or blog."],
+      tip: "Families become a real audience, which is a powerful motivator.", keys: "film animation blog website families share movie" },
+    { name: "HUE Animation", fam: "film", url: "https://huehd.com/animation/", color: "#1F8A82", tag: "Storyboards & stop-motion",
+      what: "A stop-motion animation kit: flexible USB camera with built-in microphone, Stop Motion Studio software (onion skin, voice-over, green screen), an animation book, plus printable storyboards, backgrounds and cut-outs. Designed for ages 7+.",
+      pyp: ["Science: life cycles, the water cycle (free activity guides)", "Clay or paper cut-out retellings", "Time-lapse of a plant growing"],
+      steps: ["Storyboard each frame (number it and describe it).", "Build the set and characters.", "Capture frames, using onion skin to keep movement smooth.", "Add voice, sound effects and titles; play it back."],
+      tip: "Pair younger learners and give each a role: director, animator, voice.", keys: "stop motion animation clay science life cycle water cycle camera storyboard" },
+    { name: "Powtoon", fam: "film", url: "https://www.powtoon.com/edu-home/", color: "#1F8A82", tag: "Animated videos & presentations",
+      what: "Create animated videos and presentations from ready-made templates, characters, footage and music. EDU plans offer student accounts with teacher access; free sign-up is available.",
+      pyp: ["Explainer videos for a central idea", "A “Protect our trees” public-service message", "PE: the rules of a game"],
+      steps: ["Pick a template or start blank.", "Script scenes from the storyboard.", "Add characters, text and voice-over.", "Share with the class or families."],
+      tip: "Check age requirements and use teacher-managed accounts.", keys: "video animation presentation explain PE rules persuade message" }
+  ];
+  apps.forEach(function(a){ if (a.name === "Digital Films" && DIGITAL_FILMS_URL) a.url = DIGITAL_FILMS_URL; });
+  var famLabel = { voice: "Story & Voice", comic: "Comics & Collaboration", film: "Film & Animation" };
+  $("#appGrid").innerHTML = apps.map(function(a, i){
+    return '<article class="card app" data-fam="' + a.fam + '" data-keys="' + esc((a.name + " " + a.keys + " " + a.what).toLowerCase()) + '">' +
+      '<span class="badge" style="background:' + a.color + ';align-self:flex-start">' + famLabel[a.fam] + '</span>' +
+      '<h3>' + esc(a.name) + '</h3><p class="tag">' + esc(a.tag) + '</p><p>' + esc(a.what) + '</p>' +
+      '<details><summary>In the PYP classroom &amp; how to lead learners</summary>' +
+      '<p><b>Ideas</b></p><ul>' + a.pyp.map(function(x){ return "<li>" + esc(x) + "</li>"; }).join("") + '</ul>' +
+      '<p><b>Lead your learners</b></p><ol>' + a.steps.map(function(x){ return "<li>" + esc(x) + "</li>"; }).join("") + '</ol>' +
+      '<p class="note"><b>Tip:</b> ' + esc(a.tip) + '</p></details>' +
+      (a.url ? '<p style="margin:.8em 0 0"><a class="btn" style="display:inline-flex;align-items:center;text-decoration:none" href="' + a.url + '" target="_blank" rel="noopener" aria-label="Visit the ' + esc(a.name) + ' website">Visit website ↗</a></p>' : '') +
+      '</article>';
+  }).join("");
+  var fam = "all";
+  function filterApps(){
+    var q = $("#appSearch").value.trim().toLowerCase(), n = 0;
+    $$("#appGrid .app").forEach(function(c){
+      var ok = (fam === "all" || c.dataset.fam === fam) && (!q || c.dataset.keys.indexOf(q) > -1);
+      c.classList.toggle("hidden", !ok); if (ok) n++;
+    });
+    $("#appCount").textContent = n === 0 ? "No apps match. Try another word, or select All." : "Showing " + n + " of " + apps.length + " apps.";
+  }
+  $$("[data-filter]").forEach(function(b){
+    b.addEventListener("click", function(){
+      fam = b.dataset.filter;
+      $$("[data-filter]").forEach(function(x){ x.setAttribute("aria-pressed", String(x === b)); });
+      filterApps();
+    });
+  });
+  $("#appSearch").addEventListener("input", filterApps);
+  filterApps();
+
+  // ---------- Chooser ----------
+  var chooser = {
+    speak: ["Little Bird Tales · VoiceThread", "Puppet theatre · partner read-aloud", "Learners narrate their bird’s-eye story page by page, then listen back and set one fluency goal."],
+    sequence: ["Make Beliefs Comix · HUE storyboard", "Paper comic strip · 6-panel template", "Retell the text in six panels with one caption each using a collected word."],
+    collab: ["Boomwriter · VoiceThread", "Gallery walk with sticky notes · round-robin writing", "Each group writes the next chapter; peers give TAG feedback before voting."],
+    explain: ["Powtoon · Digital Films", "Freeze-frame tableau · poster talk", "Create a 60-second explainer of the central idea for a younger class."],
+    life: ["HUE Animation", "Paper cut-out flipbook · role-play", "Animate a life cycle or habitat change in 12–20 frames with a voice-over."],
+    multi: ["Make Beliefs Comix (multiple languages) · Little Bird Tales", "Bilingual word wall · dual-language picture book", "Write the comic dialogue in the home language and in English, side by side."]
+  };
+  $("#intent").addEventListener("change", function(){
+    var r = chooser[this.value], out = $("#intentResult");
+    if (!r) { out.innerHTML = ""; return; }
+    out.innerHTML = '<div class="grid g3"><div class="card tint"><b>Try digital</b><p>' + r[0] + '</p></div><div class="card tint"><b>Or go non-digital</b><p>' + r[1] + '</p></div><div class="card tint"><b>Starter task</b><p>' + r[2] + '</p></div></div>';
+  });
+
+  // ---------- Responsible checklist ----------
+  var resp = [
+    "Ideas start in talk and on paper before any app is opened.",
+    "I have checked the platform against our school’s data-protection policy.",
+    "I have checked the platform’s age requirements and terms.",
+    "Learners use teacher-managed class accounts.",
+    "Published work shows first names only and no identifiable photos.",
+    "Learners credit images, music and ideas they use.",
+    "Learners can say how any tool, including AI, helped them.",
+    "Every learner passes the voice check: they can explain their work in their own words."
+  ];
+  $("#respList").innerHTML = resp.map(function(t, i){ return '<div class="check"><input type="checkbox" id="rc' + i + '"><label for="rc' + i + '" style="font-weight:400;margin:0">' + t + '</label></div>'; }).join("");
+  function updResp(){
+    var boxes = $$("#respList input"), n = boxes.filter(function(b){ return b.checked; }).length;
+    $("#respBar").style.width = (n / boxes.length * 100) + "%";
+    $("#respStatus").textContent = n + " of " + boxes.length + " checked" + (n === boxes.length ? ": ready to publish!" : "");
+    store.set("resp", JSON.stringify(boxes.map(function(b){ return b.checked; })));
+  }
+  try { var rs = JSON.parse(store.get("resp") || "[]"); $$("#respList input").forEach(function(b, i){ b.checked = !!rs[i]; }); } catch(e){}
+  $("#respList").addEventListener("change", updResp); updResp();
+
+  // ---------- TAG stems ----------
+  var stems = [
+    "Tell: I really like the way you…", "Tell: Your word choice ___ made me feel…", "Tell: The part that stayed with me was…",
+    "Ask: I wonder why the bird…", "Ask: What would happen if…?", "Ask: How did you decide to…?",
+    "Give: You could try adding a feeling word to panel…", "Give: Next time, maybe show what the bird sees in…", "Give: A stronger word here might be…"
+  ];
+  var lastStem = -1;
+  $("#stemBtn").addEventListener("click", function(){
+    var i; do { i = Math.floor(Math.random() * stems.length); } while (i === lastStem && stems.length > 1);
+    lastStem = i; $("#stemOut").textContent = "“" + stems[i] + "”";
+  });
+
+  // ---------- Planner ----------
+  var planIds = [["pUnit", "Unit / theme"], ["pGrade", "Grade / subject"], ["p1", "1 Learning intention"], ["p2", "2 Meaningful learner task"], ["p3", "3 Opportunities for agency"], ["p4", "4 Resources"], ["p5", "5 Evidence of learning"], ["p6", "Exit ticket"]];
+  function planText(){
+    return "Inquiry-to-Creation Learning Plan · From Reading to Writing (IBSEA 2026)\n\n" + planIds.map(function(p){ return p[1] + ":\n" + ($("#" + p[0]).value.trim() || "-") + "\n"; }).join("\n");
+  }
+  function planMsg(t){ $("#planMsg").textContent = t; }
+  $("#copyPlan").addEventListener("click", function(){
+    var t = planText();
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(t).then(function(){ planMsg("Copied to clipboard."); }, function(){ planMsg("Copy was blocked; use Download .txt instead."); });
+    } else { planMsg("Copy is not available here; use Download .txt instead."); }
+  });
+  $("#dlPlan").addEventListener("click", function(){
+    var blob = new Blob([planText()], { type: "text/plain" }), a = document.createElement("a");
+    a.href = URL.createObjectURL(blob); a.download = "Inquiry-to-Creation-plan.txt"; document.body.appendChild(a); a.click();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 500); planMsg("Downloaded.");
+  });
+  var example = { pUnit: "Sharing the planet", pGrade: "Grade 3 · English & UOI",
+    p1: "Explain how humans affect habitats, from another perspective.",
+    p2: "A narrated story from the bird’s point of view, shared with families.",
+    p3: "Learners choose the mode (speak, draw, move, publish) and co-create success criteria.",
+    p4: "Mentor text “The Fig Tree”, 6-panel storyboard, Little Bird Tales, or paper puppets as a non-digital option.",
+    p5: "Observation of reading roles, storyboard, recording, TAG comments, single-point rubric.",
+    p6: "Try the storyboard-before-app routine with my class." };
+  $("#exampleFill").addEventListener("click", function(){
+    Object.keys(example).forEach(function(k){ var el = $("#" + k); if (!el.value.trim()) { el.value = example[k]; store.set(k, el.value); } });
+    planMsg("Example added to empty fields. Edit it for your own unit.");
+  });
+  $("#resetPlan").addEventListener("click", function(){
+    if (!window.confirm("Clear all planner fields?")) return;
+    planIds.forEach(function(p){ $("#" + p[0]).value = ""; store.del(p[0]); }); planMsg("Planner cleared.");
+  });
+  $("#planForm").addEventListener("submit", function(e){ e.preventDefault(); });
+
+  // ---------- Print a section ----------
+  $$("[data-print]").forEach(function(b){
+    b.addEventListener("click", function(){
+      var id = b.dataset.print;
+      $$("section").forEach(function(s){ s.classList.toggle("print-target", s.id === id); });
+      document.body.classList.add("printing");
+      window.print();
+    });
+  });
+  window.addEventListener("afterprint", function(){ document.body.classList.remove("printing"); $$("section").forEach(function(s){ s.classList.remove("print-target"); }); });
+
+  // ---------- Timer ----------
+  var total = 480, left = 480, tick = null, endAt = 0;
+  function fmt(s){ s = Math.max(0, Math.round(s)); var m = Math.floor(s / 60), r = s % 60; return (m < 10 ? "0" : "") + m + ":" + (r < 10 ? "0" : "") + r; }
+  function draw(){ $("#tFace").textContent = fmt(left); }
+  function stop(){ clearInterval(tick); tick = null; $("#tStart").textContent = "Start"; }
+  $$("[data-min]").forEach(function(b){
+    b.addEventListener("click", function(){ stop(); total = left = (+b.dataset.min) * 60; draw(); $("#tStatus").textContent = b.dataset.min + "-minute timer ready."; });
+  });
+  $("#tStart").addEventListener("click", function(){
+    if (tick) { left = Math.max(0, (endAt - Date.now()) / 1000); stop(); $("#tStatus").textContent = "Paused."; return; }
+    if (left <= 0) left = total;
+    endAt = Date.now() + left * 1000; $("#tStart").textContent = "Pause"; $("#tStatus").textContent = "Timer running.";
+    tick = setInterval(function(){
+      left = (endAt - Date.now()) / 1000;
+      if (left <= 0) { left = 0; draw(); stop(); $("#tStatus").textContent = "Time’s up!"; return; }
+      draw();
+    }, 250);
+  });
+  $("#tReset").addEventListener("click", function(){ stop(); left = total; draw(); $("#tStatus").textContent = "Reset."; });
+  draw();
+
+  // ---------- Active nav ----------
+  if ("IntersectionObserver" in window) {
+    var links = $$("nav.toc a");
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) links.forEach(function(l){ l.classList.toggle("active", l.getAttribute("href") === "#" + en.target.id); });
+      });
+    }, { rootMargin: "-40% 0px -55% 0px" });
+    $$("main section").forEach(function(s){ io.observe(s); });
+  }
+})();
+</script>
+</body>
+</html>
